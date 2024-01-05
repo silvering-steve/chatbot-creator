@@ -123,8 +123,6 @@ def main():
                                 presence_penalty=0.15
                         ).choices[0].message.content
 
-            st.write(st.session_state.data)
-
     with example_tab:
         e_casual = {}
         for i in range(3):
