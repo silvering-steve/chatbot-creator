@@ -8,179 +8,149 @@ from openai import OpenAI
 
 
 def main():
-    st.set_page_config(page_title="Chat With A Person")
-    st.header("Let's Chat !", divider="gray")
+    st.set_page_config(page_title="Person Data Creator")
+    st.title("Person Data Creator")
+
+    if "data" not in st.session_state:
+        st.session_state.data = {}
+
+    if "dataset" not in st.session_state:
+        st.session_state.dataset = []
 
     if "client" not in st.session_state:
         st.session_state.client = None
-
-    if "data" not in st.session_state:
-        st.session_state.data = {
-            "person": {},
-            "family": {},
-            "behaviour": {},
-            "respond": {}
-        }
-
-    if "personality" not in st.session_state:
-        st.session_state.personality = None
 
     with open("question.json", 'r') as file:
         question_file = json.load(file)
         questions = [question["question"] for question in question_file["questions"]]
 
-        file.close()
+    setting_tab, data_tab, person_tab, example_tab, result_tab = st.tabs(["Setting", "Data", "Person", "Example", "Result"])
 
-    chat_tab, data_tab, personality_tab, example_tab = st.tabs(["Chat", "Data", "Personality", "Example"])
+    with setting_tab:
+        api_key = st.text_input("OpenAI API Key")
+
+        if st.button("Set", type="primary"):
+            st.session_state.client = OpenAI(api_key=api_key)
 
     with data_tab:
-        col1, col2, col3 = st.columns(3)
+        st.header("Personal")
+        col1, _ = st.columns([4, 6])
         with col1:
-            name = st.text_input("Name")
+            st.session_state.data["name"] = st.text_input("Name")
+
+        col2, col3, col4 = st.columns([3, 4, 4])
         with col2:
-            age = st.text_input("Age")
+            st.session_state.data["age"] = st.text_input("Age")
         with col3:
-            date = st.date_input("Birthdate", min_value=datetime.datetime.today() - datetime.timedelta(days=60*365))
-
-        col4, col5, col6, col7 = st.columns(4)
+            st.session_state.data["birthplace"] = st.text_input("Birthplace")
         with col4:
-            birthplace = st.text_input("Birthplace")
+            st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY",
+                                      min_value=datetime.date.today() - datetime.timedelta(100 * 365)))
+
+        st.session_state.data["address"] = st.text_area("Address")
+
+        col5, col6 = st.columns([2, 8])
         with col5:
-            address = st.text_input("Address")
+            st.session_state.data["job"] = st.text_input("Job")
         with col6:
-            city = st.text_input("Live City")
+            st.session_state.data["job_desc"] = st.text_area("Job Description")
+
+        st.divider()
+        st.header("Family")
+
+        col7, col8, col9, col10 = st.columns(4)
         with col7:
-            religion = st.text_input("Religion")
-
-        col8, col9 = st.columns(2)
+            st.session_state.data["father"] = st.text_input("Father")
         with col8:
-            job = st.text_input("Job")
+            st.session_state.data["mother"] = st.text_input("Mother")
         with col9:
-            job_desc = st.text_area("Job Desc")
-
-        st.divider()
-
-        col10, col11, col12, col13 = st.columns(4)
+            st.session_state.data["brother"] = st.text_input("Brother")
         with col10:
-            father = st.text_input("Father")
-        with col11:
-            mother = st.text_input("Mother")
-        with col12:
-            sister = st.text_input("Sister")
-        with col13:
-            brother = st.text_input("Brother")
+            st.session_state.data["sister"] = st.text_input("Sister")
 
         st.divider()
+        st.header("Personality")
 
-        likes = st.text_area("Likes", max_chars=100)
-        dislikes = st.text_area("Dislikes", max_chars=100)
-        personalities = st.text_area("Personality", max_chars=100)
-        behaviour = st.text_area("Talking Behaviours", max_chars=100)
+        st.session_state.data["likes"] = st.text_area("Likes")
+        st.session_state.data["dislikes"] = st.text_area("Dislikes")
+        st.session_state.data["personalities"] = st.text_area("Personality")
+        st.session_state.data["behaviour"] = st.text_area("Talking Behaviours")
 
         st.divider()
+        st.header("Behaviour")
 
-        dlike_respond = st.text_area("Usual respond with something that doesn't like", max_chars=100)
-        like_respond = st.text_area("Usual respond with something that like", max_chars=100)
-        dknow_respond = st.text_area("Usual respond with something that doesn't know", max_chars=100)
+        st.session_state.data["like_respond"] = st.text_area("Usual respond with something that like")
+        st.session_state.data["dlike_respond"] = st.text_area("Usual respond with something that doesn't like")
+        st.session_state.data["dknow_respond"] = st.text_area("Usual respond with something that doesn't know")
 
-        st.session_state.data["person"]["name"] = name
-        st.session_state.data["person"]["age"] = age
-        st.session_state.data["person"]["date"] = str(date)
-        st.session_state.data["person"]["birthplace"] = birthplace
-        st.session_state.data["person"]["address"] = address
-        st.session_state.data["person"]["city"] = city
-        st.session_state.data["person"]["religion"] = religion
-        st.session_state.data["person"]["job"] = job
-        st.session_state.data["person"]["job_desc"] = job_desc
-
-        st.session_state.data["family"]["father"] = father
-        st.session_state.data["family"]["mother"] = mother
-        st.session_state.data["family"]["brother"] = brother
-        st.session_state.data["family"]["sister"] = sister
-
-        st.session_state.data["behaviour"]["likes"] = likes
-        st.session_state.data["behaviour"]["dislikes"] = dislikes
-        st.session_state.data["behaviour"]["personalities"] = personalities
-        st.session_state.data["behaviour"]["behaviour"] = behaviour
-
-        st.session_state.data["respond"]["d_like"] = dlike_respond
-        st.session_state.data["respond"]["like"] = like_respond
-        st.session_state.data["respond"]["d_know"] = dknow_respond
-
-        json_data_person = json.dumps(st.session_state.data, indent=2)
-        st.download_button(
-            label="Download Person",
-            file_name="data_person.json",
-            mime="application/json",
-            data=json_data_person,
-        )
-
-    with personality_tab:
+    with person_tab:
         choices = ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"]
         personality = {}
 
         for idx, question in enumerate(questions, start=1):
             personality[f"{idx}"] = choices.index(st.select_slider(
                 question,
-                ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"],
-                value="Neutral"
+                ["Disagree", "Slightly disagree", "Slightly agree", "Agree"]
             )) + 1
 
-        if st.button("Predict", type="primary"):
-            headers = {
-                "content-type": "application/json",
-                "X-RapidAPI-Key": "73393e472bmsh711d065d4b7aa16p17ca0bjsncbce18697459",
-                "X-RapidAPI-Host": "big-five-personality-test.p.rapidapi.com"
-            }
+        if st.button("Submit", type="primary"):
+            with st.spinner('Loading...'):
+                headers = {
+                    "content-type": "application/json",
+                    "X-RapidAPI-Key": "73393e472bmsh711d065d4b7aa16p17ca0bjsncbce18697459",
+                    "X-RapidAPI-Host": "big-five-personality-test.p.rapidapi.com"
+                }
 
-            payload = {
-                "answers": personality
-            }
+                payload = {
+                    "answers": personality
+                }
 
-            response = requests.post(
-                url="https://big-five-personality-test.p.rapidapi.com/submit",
-                json=payload,
-                headers=headers
-            )
+                response = requests.post(
+                    url="https://big-five-personality-test.p.rapidapi.com/submit",
+                    json=payload,
+                    headers=headers
+                )
 
-            st.session_state.personality = st.session_state.client.chat.completions.create(
-                            model="gpt-3.5-turbo-1106",
-                            messages=[
-                                {"role": "system", "content": "You are a personality helper bot that can easily summarize people personalities based on the data that will be given using simple words and without using 'based on the data' word."},
-                                {"role": "user", "content": f"{response.json()} summarize it and retell it like you talking to somebody else and no number within 100 words"}
-                            ],
-                            stream=False,
-                            top_p=1,
-                            frequency_penalty=0.45,
-                            presence_penalty=0.15
-                    ).choices[0].message.content
+                st.session_state.data["big_five"] = st.session_state.client.chat.completions.create(
+                                model="gpt-3.5-turbo-1106",
+                                messages=[
+                                    {"role": "system", "content": "You are a personality summarizing chatbot. You will summarize the personality based on the 'your_type' value"},
+                                    {"role": "user", "content": f"{response.json()} summarize it and retell it like you talking to somebody else using casual word and no number within 50 words"}
+                                ],
+                                stream=False,
+                                top_p=1,
+                                frequency_penalty=0.45,
+                                presence_penalty=0.15
+                        ).choices[0].message.content
 
-            st.markdown(st.session_state.personality)
+            st.write(st.session_state.data)
 
     with example_tab:
         e_casual = {}
         for i in range(3):
-            e_casual[i] = st.text_area(f"Example chat when talking casually {i + 1}")
+            e_casual[i] = st.text_area(
+                f"Example when talking casually {i + 1}",
+                value="U: Hi\nA: What's up\nU: How are you doing?\nA: Pretty good"
+            )
 
         e_likes = {}
         for i in range(3):
-            e_likes[i] = st.text_area(f"Example chat when talking something he likes {i + 1}")
+            e_likes[i] = st.text_area(f"Example when talking something likes {i + 1}")
 
         e_dlikes = {}
         for i in range(3):
-            e_dlikes[i] = st.text_area(f"Example chat when talking something he doesn't likes {i + 1}")
+            e_dlikes[i] = st.text_area(f"Example when talking something doesn't likes {i + 1}")
 
         e_dknow = {}
         for i in range(3):
-            e_dknow[i] = st.text_area(f"Example chat when talking something he don't know {i + 1}")
+            e_dknow[i] = st.text_area(f"Example when talking something don't know {i + 1}")
 
-        if st.button("Done"):
-            dataset = []
+        if st.button("Done", type="primary"):
 
-            system_casual = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality}"
-            system_likes = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You likes {st.session_state.data['behaviour']['likes']}, and when talking about something you likes usually you {st.session_state.data['respond']['like']}"
-            system_dlikes = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You dislikes {st.session_state.data['behaviour']['dislikes']}, and when talking about something you dislikes usually you {st.session_state.data['respond']['d_like']}"
-            system_dknow = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You usually {st.session_state.data['behaviour']['behaviour']}, When talking about something you dont know usually you {st.session_state.data['respond']['d_know']}"
+            system_casual = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']}"
+            system_likes = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You likes {st.session_state.data['likes']}, and when talking about something you likes usually you {st.session_state.data['like_respond']}"
+            system_dlikes = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You dislikes {st.session_state.data['dislikes']}, and when talking about something you dislikes usually you {st.session_state.data['dlike_respond']}"
+            system_dknow = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You usually {st.session_state.data['behaviour']}, When talking about something you dont know usually you {st.session_state.data['dknow_respond']}"
 
             for chat in e_casual.values():
                 messages = {"messages": [{
@@ -194,7 +164,7 @@ def main():
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
 
-                dataset.append(messages)
+                st.session_state.dataset.append(messages)
 
             for chat in e_likes.values():
                 messages = {"messages": [{
@@ -208,7 +178,7 @@ def main():
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
 
-                dataset.append(messages)
+                st.session_state.dataset.append(messages)
 
             for chat in e_dlikes.values():
                 messages = {"messages": [{
@@ -222,7 +192,7 @@ def main():
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
 
-                dataset.append(messages)
+                st.session_state.dataset.append(messages)
 
             for chat in e_dknow.values():
                 messages = {"messages": [{
@@ -236,25 +206,280 @@ def main():
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
 
-                dataset.append(messages)
+                st.session_state.dataset.append(messages)
 
-            st.write(dataset)
+    with result_tab:
+        with st.expander("Person"):
+            st.write(st.session_state.data)
+        with st.expander("Dataset"):
+            st.write(st.session_state.dataset)
 
-            json_data = json.dumps(dataset, indent=2)
+        json_data_person = json.dumps(st.session_state.data)
+        json_dataset_person = json.dumps(st.session_state.dataset)
+
+        col11, col12, _ = st.columns([3, 3, 10])
+        with col11:
             st.download_button(
-                label="Download JSON",
-                file_name="data.json",
+                label="Download Person",
+                file_name="data_person.json",
                 mime="application/json",
-                data=json_data,
+                data=json_data_person,
+            )
+        with col12:
+            st.download_button(
+                label="Download Dataset",
+                file_name="dataset_person.json",
+                mime="application/json",
+                data=json_dataset_person,
             )
 
-    with st.sidebar:
-        st.title("Settings")
-
-        api_key = st.text_input("Api Key", type="password")
-
-        if st.button("Submit"):
-            st.session_state.client = OpenAI(api_key=api_key)
+    # st.set_page_config(page_title="Chat With A Person")
+    # st.header("Let's Chat !", divider="gray")
+    #
+    # if "client" not in st.session_state:
+    #     st.session_state.client = None
+    #
+    # if "data" not in st.session_state:
+    #     st.session_state.data = {
+    #         "person": {},
+    #         "family": {},
+    #         "behaviour": {},
+    #         "respond": {}
+    #     }
+    #
+    # if "personality" not in st.session_state:
+    #     st.session_state.personality = None
+    #
+    # with open("question.json", 'r') as file:
+    #     question_file = json.load(file)
+    #     questions = [question["question"] for question in question_file["questions"]]
+    #
+    #     file.close()
+    #
+    # chat_tab, data_tab, personality_tab, example_tab = st.tabs(["Chat", "Data", "Personality", "Example"])
+    #
+    # with data_tab:
+    #     col1, col2, col3 = st.columns(3)
+    #     with col1:
+    #         name = st.text_input("Name")
+    #     with col2:
+    #         age = st.text_input("Age")
+    #     with col3:
+    #         date = st.date_input("Birthdate", min_value=datetime.datetime.today() - datetime.timedelta(days=60*365))
+    #
+    #     col4, col5, col6, col7 = st.columns(4)
+    #     with col4:
+    #         birthplace = st.text_input("Birthplace")
+    #     with col5:
+    #         address = st.text_input("Address")
+    #     with col6:
+    #         city = st.text_input("Live City")
+    #     with col7:
+    #         religion = st.text_input("Religion")
+    #
+    #     col8, col9 = st.columns(2)
+    #     with col8:
+    #         job = st.text_input("Job")
+    #     with col9:
+    #         job_desc = st.text_area("Job Desc")
+    #
+    #     st.divider()
+    #
+    #     col10, col11, col12, col13 = st.columns(4)
+    #     with col10:
+    #         father = st.text_input("Father")
+    #     with col11:
+    #         mother = st.text_input("Mother")
+    #     with col12:
+    #         sister = st.text_input("Sister")
+    #     with col13:
+    #         brother = st.text_input("Brother")
+    #
+    #     st.divider()
+    #
+    #     likes = st.text_area("Likes", max_chars=100)
+    #     dislikes = st.text_area("Dislikes", max_chars=100)
+    #     personalities = st.text_area("Personality", max_chars=100)
+    #     behaviour = st.text_area("Talking Behaviours", max_chars=100)
+    #
+    #     st.divider()
+    #
+    #     dlike_respond = st.text_area("Usual respond with something that doesn't like", max_chars=100)
+    #     like_respond = st.text_area("Usual respond with something that like", max_chars=100)
+    #     dknow_respond = st.text_area("Usual respond with something that doesn't know", max_chars=100)
+    #
+    #     st.session_state.data["person"]["name"] = name
+    #     st.session_state.data["person"]["age"] = age
+    #     st.session_state.data["person"]["date"] = str(date)
+    #     st.session_state.data["person"]["birthplace"] = birthplace
+    #     st.session_state.data["person"]["address"] = address
+    #     st.session_state.data["person"]["city"] = city
+    #     st.session_state.data["person"]["religion"] = religion
+    #     st.session_state.data["person"]["job"] = job
+    #     st.session_state.data["person"]["job_desc"] = job_desc
+    #
+    #     st.session_state.data["family"]["father"] = father
+    #     st.session_state.data["family"]["mother"] = mother
+    #     st.session_state.data["family"]["brother"] = brother
+    #     st.session_state.data["family"]["sister"] = sister
+    #
+    #     st.session_state.data["behaviour"]["likes"] = likes
+    #     st.session_state.data["behaviour"]["dislikes"] = dislikes
+    #     st.session_state.data["behaviour"]["personalities"] = personalities
+    #     st.session_state.data["behaviour"]["behaviour"] = behaviour
+    #
+    #     st.session_state.data["respond"]["d_like"] = dlike_respond
+    #     st.session_state.data["respond"]["like"] = like_respond
+    #     st.session_state.data["respond"]["d_know"] = dknow_respond
+    #
+    #     json_data_person = json.dumps(st.session_state.data, indent=2)
+    #     st.download_button(
+    #         label="Download Person",
+    #         file_name="data_person.json",
+    #         mime="application/json",
+    #         data=json_data_person,
+    #     )
+    #
+    # with personality_tab:
+    #     choices = ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"]
+    #     personality = {}
+    #
+    #     for idx, question in enumerate(questions, start=1):
+    #         personality[f"{idx}"] = choices.index(st.select_slider(
+    #             question,
+    #             ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"],
+    #             value="Neutral"
+    #         )) + 1
+    #
+    #     if st.button("Predict", type="primary"):
+    #         headers = {
+    #             "content-type": "application/json",
+    #             "X-RapidAPI-Key": "73393e472bmsh711d065d4b7aa16p17ca0bjsncbce18697459",
+    #             "X-RapidAPI-Host": "big-five-personality-test.p.rapidapi.com"
+    #         }
+    #
+    #         payload = {
+    #             "answers": personality
+    #         }
+    #
+    #         response = requests.post(
+    #             url="https://big-five-personality-test.p.rapidapi.com/submit",
+    #             json=payload,
+    #             headers=headers
+    #         )
+    #
+    #         st.session_state.personality = st.session_state.client.chat.completions.create(
+    #                         model="gpt-3.5-turbo-1106",
+    #                         messages=[
+    #                             {"role": "system", "content": "You are a personality helper bot that can easily summarize people personalities based on the data that will be given using simple words and without using 'based on the data' word."},
+    #                             {"role": "user", "content": f"{response.json()} summarize it and retell it like you talking to somebody else and no number within 100 words"}
+    #                         ],
+    #                         stream=False,
+    #                         top_p=1,
+    #                         frequency_penalty=0.45,
+    #                         presence_penalty=0.15
+    #                 ).choices[0].message.content
+    #
+    #         st.markdown(st.session_state.personality)
+    #
+    # with example_tab:
+    #     e_casual = {}
+    #     for i in range(3):
+    #         e_casual[i] = st.text_area(f"Example chat when talking casually {i + 1}")
+    #
+    #     e_likes = {}
+    #     for i in range(3):
+    #         e_likes[i] = st.text_area(f"Example chat when talking something he likes {i + 1}")
+    #
+    #     e_dlikes = {}
+    #     for i in range(3):
+    #         e_dlikes[i] = st.text_area(f"Example chat when talking something he doesn't likes {i + 1}")
+    #
+    #     e_dknow = {}
+    #     for i in range(3):
+    #         e_dknow[i] = st.text_area(f"Example chat when talking something he don't know {i + 1}")
+    #
+    #     if st.button("Done"):
+    #         dataset = []
+    #
+    #         system_casual = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality}"
+    #         system_likes = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You likes {st.session_state.data['behaviour']['likes']}, and when talking about something you likes usually you {st.session_state.data['respond']['like']}"
+    #         system_dlikes = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You dislikes {st.session_state.data['behaviour']['dislikes']}, and when talking about something you dislikes usually you {st.session_state.data['respond']['d_like']}"
+    #         system_dknow = f"You are {st.session_state.data['person']['name']}, a {st.session_state.data['person']['age']}-years-old {st.session_state.data['person']['job']}, {st.session_state.personality} You usually {st.session_state.data['behaviour']['behaviour']}, When talking about something you dont know usually you {st.session_state.data['respond']['d_know']}"
+    #
+    #         for chat in e_casual.values():
+    #             messages = {"messages": [{
+    #                 "role": "systems", "content": system_casual
+    #             }]}
+    #
+    #             text = chat.splitlines()
+    #
+    #             messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
+    #             messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
+    #
+    #             dataset.append(messages)
+    #
+    #         for chat in e_likes.values():
+    #             messages = {"messages": [{
+    #                 "role": "systems", "content": system_likes
+    #             }]}
+    #
+    #             text = chat.splitlines()
+    #
+    #             messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
+    #             messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
+    #
+    #             dataset.append(messages)
+    #
+    #         for chat in e_dlikes.values():
+    #             messages = {"messages": [{
+    #                 "role": "systems", "content": system_dlikes
+    #             }]}
+    #
+    #             text = chat.splitlines()
+    #
+    #             messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
+    #             messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
+    #
+    #             dataset.append(messages)
+    #
+    #         for chat in e_dknow.values():
+    #             messages = {"messages": [{
+    #                 "role": "systems", "content": system_dknow
+    #             }]}
+    #
+    #             text = chat.splitlines()
+    #
+    #             messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
+    #             messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
+    #             messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
+    #
+    #             dataset.append(messages)
+    #
+    #         st.write(dataset)
+    #
+    #         json_data = json.dumps(dataset, indent=2)
+    #         st.download_button(
+    #             label="Download JSON",
+    #             file_name="data.json",
+    #             mime="application/json",
+    #             data=json_data,
+    #         )
+    #
+    # with st.sidebar:
+    #     st.title("Settings")
+    #
+    #     api_key = st.text_input("Api Key", type="password")
+    #
+    #     if st.button("Submit"):
+    #         st.session_state.client = OpenAI(api_key=api_key)
 
     # f = open('character.json')
     # data = json.load(f)
