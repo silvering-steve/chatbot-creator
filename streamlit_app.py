@@ -24,7 +24,15 @@ def main():
         question_file = json.load(file)
         questions = [question["question"] for question in question_file["questions"]]
 
-    setting_tab, data_tab, person_tab, example_tab, result_tab = st.tabs(["Setting", "Data", "Person", "Example", "Result"])
+    with open("likeness.json", "r") as file:
+        likeness_file = json.load(file)
+        likeness_questions = likeness_file["likes"]
+        dislikes_questions = likeness_file["dislikes"]
+        routines_questions = likeness_file["routines"]
+
+    setting_tab, data_tab, like_tab, person_tab, example_tab, result_tab = st.tabs(
+        ["Setting", "Data", "Likeness", "Person", "Example", "Result"]
+    )
 
     with setting_tab:
         api_key = st.text_input("OpenAI API Key")
@@ -45,7 +53,8 @@ def main():
             st.session_state.data["birthplace"] = st.text_input("Birthplace")
         with col4:
             st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY",
-                                      min_value=datetime.date.today() - datetime.timedelta(100 * 365)))
+                                                                   min_value=datetime.date.today() - datetime.timedelta(
+                                                                       100 * 365)))
 
         st.session_state.data["address"] = st.text_area("Address")
 
@@ -70,9 +79,6 @@ def main():
 
         st.divider()
         st.header("Personality")
-
-        st.session_state.data["likes"] = st.text_area("Likes")
-        st.session_state.data["dislikes"] = st.text_area("Dislikes")
         st.session_state.data["personalities"] = st.text_area("Personality")
         st.session_state.data["behaviour"] = st.text_area("Talking Behaviours")
 
@@ -82,6 +88,25 @@ def main():
         st.session_state.data["like_respond"] = st.text_area("Usual respond with something that like")
         st.session_state.data["dlike_respond"] = st.text_area("Usual respond with something that doesn't like")
         st.session_state.data["dknow_respond"] = st.text_area("Usual respond with something that doesn't know")
+
+    with like_tab:
+        with st.expander("Like"):
+            st.session_state.data["like"] = {}
+            for k, v in likeness_questions.items():
+                st.write(f"{v}")
+                st.session_state.data["like"][k] = st.text_area(f"{k}_like", label_visibility="collapsed")
+
+        with st.expander("Dislike"):
+            st.session_state.data["dislike"] = {}
+            for k, v in dislikes_questions.items():
+                st.write(f"{v}")
+                st.session_state.data["dislike"][k] = st.text_area(f"{k}_dislikes", label_visibility="collapsed")
+
+        with st.expander("Routine"):
+            st.session_state.data["routine"] = {}
+            for k, v in routines_questions.items():
+                st.write(f"{v}")
+                st.session_state.data["routine"][k] = st.text_area(k, label_visibility="collapsed")
 
     with person_tab:
         choices = ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"]
@@ -112,16 +137,18 @@ def main():
                 )
 
                 st.session_state.data["big_five"] = st.session_state.client.chat.completions.create(
-                                model="gpt-3.5-turbo-1106",
-                                messages=[
-                                    {"role": "system", "content": "You are a personality summarizing chatbot. You will summarize the personality based on the 'your_type' value"},
-                                    {"role": "user", "content": f"{response.json()} summarize it and retell it like you talking to somebody else using casual word and no number within 50 words"}
-                                ],
-                                stream=False,
-                                top_p=1,
-                                frequency_penalty=0.45,
-                                presence_penalty=0.15
-                        ).choices[0].message.content
+                    model="gpt-3.5-turbo-1106",
+                    messages=[
+                        {"role": "system",
+                         "content": "You are a personality summarizing chatbot. You will summarize the personality based on the 'your_type' value"},
+                        {"role": "user",
+                         "content": f"{response.json()} summarize it and retell it like you talking to somebody else using casual word and no number within 50 words"}
+                    ],
+                    stream=False,
+                    top_p=1,
+                    frequency_penalty=0.45,
+                    presence_penalty=0.15
+                ).choices[0].message.content
 
     with example_tab:
         e_casual = {}
@@ -157,7 +184,7 @@ def main():
 
                 text = chat.splitlines()
 
-                messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
@@ -171,7 +198,7 @@ def main():
 
                 text = chat.splitlines()
 
-                messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
@@ -185,7 +212,7 @@ def main():
 
                 text = chat.splitlines()
 
-                messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
@@ -199,7 +226,7 @@ def main():
 
                 text = chat.splitlines()
 
-                messages['messages'].append({"role": "user", "content":text[0].replace("U:", "")})
+                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
                 messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
                 messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
