@@ -5,12 +5,13 @@ import streamlit as st
 from openai import OpenAI
 
 def hide_streamlit_style():
-    hide_style = 
+    hide_style = """
         <style>
         .hide-label .stCheckbox label, .hide-label .stTextInput label {
             display: none;
         }
         </style>
+    """
 
     st.markdown(hide_style, unsafe_allow_html=True)
 
