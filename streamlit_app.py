@@ -11,17 +11,6 @@ def create_checkboxes(category, items):
             st.checkbox(item["label"], key=unique_key)
         elif item["type"] == "text":
             st.text_input("", key=unique_key, placeholder="Other (please specify)")
-            
-def create_checkboxes(category, items):
-    for index, item in enumerate(items):
-        unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
-        if item["type"] == "checkbox":
-            # Menambahkan label dan membuatnya tersembunyi
-            st.checkbox(label=item["label"], key=unique_key, label_visibility="collapsed")
-        elif item["type"] == "text":
-            # Menambahkan placeholder sebagai label dan membuatnya tersembunyi
-            st.text_input(label=item["label"], key=unique_key, placeholder=item["label"], label_visibility="collapsed")
-
 
 def main():
     st.set_page_config(page_title="Person Data Creator")
