@@ -4,29 +4,14 @@ import requests
 import streamlit as st
 from openai import OpenAI
 
-def hide_streamlit_style():
-    hide_style = """
-        <style>
-        .hide-label .stCheckbox label, .hide-label .stTextInput label {
-            display: none;
-        }
-        </style>
-    """
-
-    st.markdown(hide_style, unsafe_allow_html=True)
-
 def create_checkboxes(category, items):
     for index, item in enumerate(items):
         unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
-        container = st.container()
-        container_class = "hide-label"  # Class to apply the hidden label style
         if item["type"] == "checkbox":
-            with container:
-                st.checkbox(label=item["label"], key=unique_key)
+            st.checkbox(item["label"], key=unique_key)
         elif item["type"] == "text":
-            with container:
-                st.text_input(label=item["label"], key=unique_key, placeholder="Other (please specify)")
-
+            st.text_input("", key=unique_key, placeholder="Other (please specify)")
+            
 def create_checkboxes(category, items):
     for index, item in enumerate(items):
         unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
@@ -39,7 +24,6 @@ def create_checkboxes(category, items):
 
 
 def main():
-    hide_streamlit_style()
     st.set_page_config(page_title="Person Data Creator")
     st.title("Person Data Creator")
 
