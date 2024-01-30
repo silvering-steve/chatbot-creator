@@ -1,16 +1,20 @@
 import datetime
 import json
+import uuid
+
 import requests
 import streamlit as st
 from openai import OpenAI
 
+
 def create_checkboxes(category, items):
     for index, item in enumerate(items):
         unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
-        if item["type"] == "checkbox":
-            st.checkbox(item["label"], key=unique_key)
-        elif item["type"] == "text":
-            st.text_input("", key=unique_key, placeholder="Other (please specify)")
+        # if item["type"] == "checkbox":
+        #     st.checkbox(item["label"], key=unique_key)
+        # elif item["type"] == "text":
+        #     st.text_input("", key=unique_key, placeholder="Other (please specify)")
+
 
 def main():
     st.set_page_config(page_title="Person Data Creator")
@@ -31,7 +35,7 @@ def main():
         questions = [question["question"] for question in question_file["questions"]]
 
     with open("likeness.json", "r") as file:
-        data = json.load(file)
+        favorable = json.load(file)
 
     # Streamlit tabs
     setting_tab, data_tab, likes_tab, dislikes_tab, routines_tab, person_tab, example_tab, result_tab = st.tabs(
@@ -42,6 +46,7 @@ def main():
         api_key = st.text_input("OpenAI API Key")
         if st.button("Set", type="primary"):
             st.session_state.client = OpenAI(api_key=api_key)
+
     # Data tab
     with data_tab:
         st.header("Personal")
@@ -54,7 +59,9 @@ def main():
         with col3:
             st.session_state.data["birthplace"] = st.text_input("Birthplace")
         with col4:
-            st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY", min_value=datetime.date.today() - datetime.timedelta(100 * 365)))
+            st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY",
+                                                                   min_value=datetime.date.today() - datetime.timedelta(
+                                                                       100 * 365)))
         st.session_state.data["address"] = st.text_area("Address")
         col5, col6 = st.columns([2, 8])
         with col5:
@@ -85,33 +92,65 @@ def main():
 
     # Likeness tab
     with routines_tab:
-        for category in data[0]["routines"]:
+        st.session_state.data["routines"] = {}
+
+        for category in favorable[0]["routines"]:
             st.subheader(category["title"])
-            create_checkboxes(category["label"], category["answer"])
+            st.session_state.data["routines"][category['label']] = []
+
+            options = [item["label"] for item in category['answer']]
+            routines_data = st.multiselect(category["title"], options, label_visibility="collapsed")
+
+            st.session_state.data["routines"][category['label']] += routines_data
+
+            if "Other" in st.session_state.data["routines"][category['label']]:
+                st.session_state.data["routines"][category['label']].append(
+                    st.text_input(f"Other routines {category['label']}"))
 
     with likes_tab:
-        for category in data[1]["likes"]:
+        st.session_state.data["likes"] = {}
+
+        for category in favorable[1]["likes"]:
             st.subheader(category["title"])
-            create_checkboxes(category["label"], category["answer"])
+            st.session_state.data["likes"][category['label']] = []
+
+            options = [item["label"] for item in category['answer']]
+            likes_data = st.multiselect(category["title"], options, label_visibility="collapsed")
+
+            st.session_state.data["likes"][category['label']] += likes_data
+
+            if "Other" in st.session_state.data["likes"][category['label']]:
+                st.session_state.data["likes"][category['label']].append(
+                    st.text_input(f"Other likes {category['label']}"))
 
     with dislikes_tab:
-        for category in data[2]["dislikes"]:
-            st.subheader(category["title"])
-            create_checkboxes(category["label"], category["answer"])
+        st.session_state.data["dislikes"] = {}
 
+        for category in favorable[2]["dislikes"]:
+            st.subheader(category["title"])
+            st.session_state.data["dislikes"][category['label']] = []
+
+            options = [item["label"] for item in category['answer']]
+            dislikes_tab = st.multiselect(category["title"], options, label_visibility="collapsed")
+
+            st.session_state.data["dislikes"][category['label']] += dislikes_tab
+
+            if "Other" in st.session_state.data["dislikes"][category['label']]:
+                st.session_state.data["dislikes"][category['label']].append(
+                    st.text_input(f"Other dislikes {category['label']}"))
 
     # Person tab
     with person_tab:
         choices = ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"]
         st.session_state.data["personality"] = {}
-        # Contoh pertanyaan, sesuaikan dengan kebutuhan Anda
-        questions = ["I enjoy social gatherings", "I like to try new things"]
+
         for idx, question in enumerate(questions, start=1):
             st.session_state.data["personality"][question] = st.select_slider(question, options=choices)
 
     with example_tab:
         st.session_state.data["examples"] = {}
         example_prompts = ["Casual conversation", "Talking about likes", "Talking about dislikes"]
+
         for idx, prompt in enumerate(example_prompts, start=1):
             st.session_state.data["examples"][prompt] = st.text_area(f"Example of {prompt.lower()}:")
 
