@@ -26,12 +26,12 @@ def main():
         st.session_state.client = None
 
     # Load JSON data
-    try:
-        with open("question.json", 'r') as file:
-            question_file = json.load(file)
-            questions = [question["question"] for question in question_file["questions"]]
-    except : 
-        print("Error")
+    #try:
+    with open("question.json", 'r') as file:
+        question_file = json.load(file)
+        questions = [question["question"] for question in question_file["questions"]]
+    #except : 
+     #   print("Error")
 
     with open("likeness.json", "r") as file:
         data = json.load(file)
