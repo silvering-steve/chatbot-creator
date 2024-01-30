@@ -1,119 +1,4746 @@
+[{
+    "routines" : [
+    {
+        "label" : "daily_activities",
+        "title": "List your daily activities",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Working at the office or doing freelance work",
+            "name": "daily_activities"
+        },
+        {
+            "type": "checkbox",
+            "label":"Engaging in sports or physical activities",
+            "name": "daily_activities"
+        },
+          {
+            "type": "checkbox",
+            "label":"Preparing and consuming meals",
+            "name": "daily_activities"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "daily_activities"
+        }]
+    },
+    {
+        "label" : "morning_routines",
+        "title": "List your morning routines",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Waking up and getting cleaned up.",
+            "name": "morning_routines"
+        },
+        {
+            "type": "checkbox",
+            "label":"Commuting to work or starting work",
+            "name": "morning_routines"
+        },
+          {
+            "type": "checkbox",
+            "label":"Having a healthy breakfast",
+            "name": "morning_routines"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "morning_routines"
+        }]
+    },
+      {
+        "label" : "afternoon_routines",
+        "title": "List your afternoon routines",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Lunch break and a short rest",
+            "name": "afternoon_routines"
+        },
+        {
+            "type": "checkbox",
+            "label":"Continuing work or completing tasks",
+            "name": "afternoon_routines"
+        },
+          {
+            "type": "checkbox",
+            "label":"Interacting with coworkers or attending meetings",
+            "name": "afternoon_routines"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "afternoon_routines"
+        }]
+    },
+      {
+        "label" : "night_routines",
+        "title": "List your night routines",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Lunch break and a short rest",
+            "name": "night_routines"
+        },
+        {
+            "type": "checkbox",
+            "label":"Continuing work or completing tasks",
+            "name": "night_routines"
+        },
+          {
+            "type": "checkbox",
+            "label":"Interacting with coworkers or attending meetings",
+            "name": "night_routines"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "night_routines"
+        }]
+    },
+      {
+        "label" : "weekend_routines",
+        "title": "List your weekend routines",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Exercising or engaging in outdoor activities",
+            "name": "weekend_routines"
+        },
+        {
+            "type": "checkbox",
+            "label":"Exploring new places ",
+            "name": "weekend_routines"
+        },
+          {
+            "type": "checkbox",
+            "label":"Relaxing and enjoying leisure time",
+            "name": "weekend_routines"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "weekend_routines"
+        }]
+    },
+      {
+        "label" : "weekday_routines",
+        "title": "List your weekday routines",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Working at the office ",
+            "name": "weekday_routines"
+        },
+        {
+            "type": "checkbox",
+            "label":"Spending time with family or friends after work",
+            "name": "weekday_routines"
+        },
+          {
+            "type": "checkbox",
+            "label":"Routine activities like shopping or cleaning the house",
+            "name": "weekday_routines"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "weekday_routines"
+        }]
+    }
+    ]
+
+},
 {
-  "routines": {
-    "daily_activities": "List your daily activities",
-    "morning_routines": "List your morning routines",
-    "afternoon_routines": "List your afternoon routines",
-    "night_routines": "List your night routines",
-    "weekend_routines": "List your weekend routines",
-    "weekday_routines": "List your weekday routines"
-  },
-  "likes": {
-    "food": "List your favorite foods and why",
-    "beverages": "List your favorite beverages and why",
-    "movie": "List your favorite movies and why",
-    "music": "List your favorite musics and it's band",
-    "book": "List your favorite books and it's creator",
-    "genre_book": "List your favorite book genre and why",
-    "city": "List your favorite cities and why",
-    "country": "List your favorite countries and why",
-    "hobbies": "List your favorite hobbies and why",
-    "colour": "List your favorite colours and why",
-    "sport": "List your favorite sports and why",
-    "genre_movie": "List your favorite movie genre and why",
-    "genre_music": "List your favorite music genre and why",
-    "band": "List your favorite bands and why",
-    "games": "List your favorites games and why",
-    "tv": "List your favorites tv show and why",
-    "season": "List your favorites seasons and why",
-    "restaurant": "List your favorites restaurants and why",
-    "application": "List your favorites phone applications and why",
-    "person": "List your favorites persons and why",
-    "historical_person": "List your favorites historical persons and why",
-    "art": "List your favorites arts and why",
-    "actress": "List your favorites actress and why",
-    "actor": "List your favorites actor and why",
-    "artist": "List your favorites artist and why",
-    "singer": "List your favorites singer and why",
-    "athlete": "List your favorites athlete and why",
-    "clothing": "List your favorites clothing and why",
-    "clothing_style": "List your favorites clothing style and why",
-    "activity": "List your favorites activity in weekend and why",
-    "car": "List your favorites car and why",
-    "place": "List your favorites place and why",
-    "day": "List your favorites day and why",
-    "date": "List your favorites date and why",
-    "animal": "List your favorites animal and why",
-    "pet": "List your favorites pet and why",
-    "family_activity": "List your favorites family activity and why",
-    "puzzle": "List your favorites puzzle and why",
-    "park": "List your favorites park and why",
-    "gadget": "List your favorites gadget and why",
-    "subject": "List your favorites subject and why",
-    "friends": "List your favorites friends and why",
-    "job": "List your favorites jobs and why",
-    "moments": "List your favorites moments and why",
-    "year": "List your favorites year and why",
-    "comic_character": "List your favorites comic character and why",
-    "cartoon_character": "List your favorites cartoon character and why",
-    "movie_character": "List your favorites movie character and why",
-    "fictional_character": "List your favorites fictional character and why",
-    "accessories": "List your favorites accessories and why",
-    "hair_style": "List your favorites hair style and why",
-    "music_instrument": "List your favorites music instruments and why",
-    "plant": "List your favorites plants and why"
-  },
-  "dislikes": {
-    "food": "List your least favorite foods and why",
-    "beverages": "List your least favorite beverages and why",
-    "movie": "List your least favorite movies and why",
-    "music": "List your least favorite music and its band",
-    "book": "List your least favorite books and its creator",
-    "genre_book": "List your least favorite book genres and why",
-    "city": "List your least favorite cities and why",
-    "country": "List your least favorite countries and why",
-    "hobbies": "List your least favorite hobbies and why",
-    "colour": "List your least favorite colors and why",
-    "sport": "List your least favorite sports and why",
-    "genre_movie": "List your least favorite movie genres and why",
-    "genre_music": "List your least favorite music genres and why",
-    "band": "List your least favorite bands and why",
-    "games": "List your least favorite games and why",
-    "tv": "List your least favorite TV shows and why",
-    "season": "List your least favorite seasons and why",
-    "restaurant": "List your least favorite restaurants and why",
-    "application": "List your least favorite phone applications and why",
-    "person": "List your least favorite persons and why",
-    "historical_person": "List your least favorite historical persons and why",
-    "art": "List your least favorite arts and why",
-    "actress": "List your least favorite actresses and why",
-    "actor": "List your least favorite actors and why",
-    "artist": "List your least favorite artists and why",
-    "singer": "List your least favorite singers and why",
-    "athlete": "List your least favorite athletes and why",
-    "clothing_style": "List your least favorite clothing styles and why",
-    "activity": "List your least favorite activities on weekends and why",
-    "car": "List your least favorite cars and why",
-    "place": "List your least favorite places and why",
-    "day": "List your least favorite days and why",
-    "date": "List your least favorite dates and why",
-    "animal": "List your least favorite animals and why",
-    "pet": "List your least favorite pets and why",
-    "family_activity": "List your least favorite family activities and why",
-    "puzzle": "List your least favorite puzzles and why",
-    "park": "List your least favorite parks and why",
-    "gadget": "List your least favorite gadgets and why",
-    "subject": "List your least favorite subjects and why",
-    "friends": "List your least favorite friends and why",
-    "job": "List your least favorite jobs and why",
-    "moments": "List your least favorite moments and why",
-    "year": "List your least favorite years and why",
-    "comic_character": "List your least favorite comic characters and why",
-    "cartoon_character": "List your least favorite cartoon characters and why",
-    "movie_character": "List your least favorite movie characters and why",
-    "fictional_character": "List your least favorite fictional characters and why",
-    "accessories": "List your least favorite accessories and why",
-    "hair_style": "List your least favorite hair styles and why",
-    "music_instrument": "List your least favorite music instruments and why",
-    "plant": "List your least favorite plants and why"
-  }
+    "likes" : [
+    {
+        "label" : "food",
+        "title": "List your favorite foods",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Pizza",
+            "name": "food"
+        },
+        {
+            "type": "checkbox",
+            "label":"Soto",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Ramen",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Burger",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Tacos",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Sushi",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Pasta",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Cheese Cake",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Steak",
+            "name": "food"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chicken Noodle",
+            "name": "food"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "food"
+        }]
+    },
+    {
+        "label" : "beverages",
+        "title": "List your favorite beverages",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Coffee",
+            "name": "beverages"
+        },
+        {
+            "type": "checkbox",
+            "label":"Matcha Latte",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Vanilla Milkshake",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Water",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Ice Tea",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Orange Juice",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Wine",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Lemonade",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Herbal Tea",
+            "name": "beverages"
+        },
+          {
+            "type": "checkbox",
+            "label":"Smoothie",
+            "name": "beverages"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "beverages"
+        }]
+    },
+      {
+        "label" : "genre_movie",
+        "title": "List your favorite genre movies",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Action",
+            "name": "genre_movie"
+        },
+        {
+            "type": "checkbox",
+            "label":"Comedy",
+            "name": "genre_movie"
+        },
+          {
+            "type": "checkbox",
+            "label":"Romance",
+            "name": "genre_movie"
+        },
+          {
+            "type": "checkbox",
+            "label":"Thriller",
+            "name": "genre_movie"
+        },
+          {
+            "type": "checkbox",
+            "label":"Horror",
+            "name": "genre_movie"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fantasy",
+            "name": "genre_movie"
+        },
+          {
+            "type": "checkbox",
+            "label":"Documentary",
+            "name": "genre_movie"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_movie"
+        }]
+    },
+      {
+        "label" : "movie",
+        "title": "List your favorite movies",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "movie"
+        }]
+    },
+      {
+        "label" : "genre_music",
+        "title": "List your favorite music genre",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Pop",
+            "name": "genre_music"
+        },
+        {
+            "type": "checkbox",
+            "label":"Hip-hop",
+            "name": "genre_music"
+        },
+          {
+            "type": "checkbox",
+            "label":"Rock",
+            "name": "genre_music"
+        },
+           {
+            "type": "checkbox",
+            "label":"Electronic",
+            "name": "genre_music"
+        },
+           {
+            "type": "checkbox",
+            "label":"Jazz",
+            "name": "genre_music"
+        },
+           {
+            "type": "checkbox",
+            "label":"Classical",
+            "name": "genre_music"
+        },
+           {
+            "type": "checkbox",
+            "label":"R&B",
+            "name": "genre_music"
+        },
+          {
+            "type": "checkbox",
+            "label":"Indie",
+            "name": "genre_music"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_music"
+        }]
+    },
+      {
+        "label" : "music",
+        "title": "List your favorite musics",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "music"
+        }]
+    },
+      {
+        "label" : "genre_book",
+        "title": "List your favorite book genre",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Mystery",
+            "name": "genre_book"
+        },
+        {
+            "type": "checkbox",
+            "label":"Historical Fiction",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fantasy",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Science Fiction",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Biography",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Comedy",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Non-fiction",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Young Adult",
+            "name": "genre_book"
+        },
+          {
+            "type": "checkbox",
+            "label":"Poetry",
+            "name": "genre_book"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_book"
+        }]
+    },
+      {
+        "label" : "book",
+        "title": "List your favorite books",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "book"
+        }]
+    },
+      {
+        "label" : "city",
+        "title": "List your favorite cities",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Paris",
+            "name": "city"
+        },
+        {
+            "type": "checkbox",
+            "label":"Tokyo",
+            "name": "city"
+        },
+          {
+            "type": "checkbox",
+            "label":"Jakarta",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Seoul",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"New York",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Lauterbrunnen",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Sydney",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Roma",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Barcelona",
+            "name": "city"
+        },
+           {
+            "type": "checkbox",
+            "label":"Dubai",
+            "name": "city"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "city"
+        }]
+    },
+      {
+        "label" : "country",
+        "title": "List your favorite countries",
+        "answer": [{
+            "type": "checkbox",
+            "label":"South Korea",
+            "name": "country"
+        },
+        {
+            "type": "checkbox",
+            "label":"Indonesia",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"USA",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Singapore",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Thailand",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Australia",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Brazil",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Saudi Arabia",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"Italia",
+            "name": "country"
+        },
+          {
+            "type": "checkbox",
+            "label":"France",
+            "name": "country"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "country"
+        }]
+    },
+      {
+        "label" : "hobbies",
+        "title": "List your favorite hobbies",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Travelling",
+            "name": "hobbies"
+        },
+        {
+            "type": "checkbox",
+            "label":"Photography",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Watching Movie",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Painting",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Jogging",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Yoga",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Gardening",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Reading",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Cycling",
+            "name": "hobbies"
+        },
+          {
+            "type": "checkbox",
+            "label":"Gym",
+            "name": "hobbies"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "hobbies"
+        }]
+    },
+      {
+        "label" : "colour",
+        "title": "List your favorite colours",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Red",
+            "name": "colour"
+        },
+        {
+            "type": "checkbox",
+            "label":"Black",
+            "name": "colour"
+        },
+          {
+            "type": "checkbox",
+            "label":"Blue",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"White",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Pink",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Green",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Yellow",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Orange",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Navy",
+            "name": "colour"
+        },
+           {
+            "type": "checkbox",
+            "label":"Lavender",
+            "name": "colour"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "colour"
+        }]
+    },
+      {
+        "label" : "sport",
+        "title": "List your favorite sports",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Basketball",
+            "name": "sport"
+        },
+        {
+            "type": "checkbox",
+            "label":"Soccer",
+            "name": "sport"
+        },
+          {
+            "type": "checkbox",
+            "label":"Tennis",
+            "name": "sport"
+        },
+          {
+            "type": "checkbox",
+            "label":"Badminton",
+            "name": "sport"
+        },
+          {
+            "type": "checkbox",
+            "label":"Surfing",
+            "name": "sport"
+        },
+          {
+            "type": "checkbox",
+            "label":"Archery",
+            "name": "sport"
+        },
+          {
+            "type": "checkbox",
+            "label":"Table Tennis",
+            "name": "sport"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "sport"
+        }]
+    },
+      {
+        "label" : "band",
+        "title": "List your favorite bands",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "band"
+        }]
+    },
+      {
+        "label" : "games",
+        "title": "List your favorites games",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Minecraft",
+            "name": "games"
+        },
+        {
+            "type": "checkbox",
+            "label":"Mobile Legend",
+            "name": "games"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fortnite",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"Apex Legends",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Witcher 3: Wild Hunt",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"League of Legends",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"Call of Duty: Warzone",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"Overwatch",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"Super Mario Bros",
+            "name": "games"
+        },
+           {
+            "type": "checkbox",
+            "label":"Animal Crossing: New Horizons",
+            "name": "games"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "games"
+        }]
+    },
+      {
+        "label" : "tv",
+        "title": "List your favorites tv show",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Game of Thrones",
+            "name": "tv"
+        },
+        {
+            "type": "checkbox",
+            "label":"Stranger Things",
+            "name": "tv"
+        },
+          {
+            "type": "checkbox",
+            "label":"The Office",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"Breaking Bad",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Simpsons",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"Friends",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"Black Mirror",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Sopranos",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Mandalorian",
+            "name": "tv"
+        },
+           {
+            "type": "checkbox",
+            "label":"Westworld",
+            "name": "tv"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "tv"
+        }]
+    },
+      {
+        "label" : "season",
+        "title": "List your favorites seasons",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Winter",
+            "name": "season"
+        },
+        {
+            "type": "checkbox",
+            "label":"Spring",
+            "name": "season"
+        },
+          {
+            "type": "checkbox",
+            "label":"Summer",
+            "name": "season"
+        },
+        {
+            "type": "checkbox",
+            "label":"Fall",
+            "name": "season"
+        },
+          {
+            "type": "checkbox",
+            "label":"Dry",
+            "name": "season"
+        },
+          {
+            "type": "checkbox",
+            "label":"Rainy",
+            "name": "season"
+        }
+        ]
+    },
+      {
+        "label" : "fastfood_restaurant",
+        "title": "List your favorites fast food restaurants",
+        "answer": [{
+            "type": "checkbox",
+            "label":"McDonald's",
+            "name": "fastfood_restaurant"
+        },
+        {
+            "type": "checkbox",
+            "label":"Subway",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Pizza Hut",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"KFC",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Burger King",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Wendy's",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chipotle",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Taco Bell",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chick-fil-A",
+            "name": "fastfood_restaurant"
+        },
+          {
+            "type": "checkbox",
+            "label":"Popeye",
+            "name": "fastfood_restaurant"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "fastfood_restaurant"
+        }]
+    },
+      {
+        "label" : "application",
+        "title": "List your favorites phone applications",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "application"
+        }]
+    },
+      {
+        "label" : "person",
+        "title": "List your favorites persons",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "person"
+        }]
+    },
+      {
+        "label" : "historical_person",
+        "title": "List your favorites historical persons",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Mahatma Gandhi",
+            "name": "historical_person"
+        },
+        {
+            "type": "checkbox",
+            "label": "Leonardo da Vinci",
+            "name": "historical_person"
+        },
+        {
+            "type": "checkbox",
+            "label": "Nelson Mandela",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Albert Einstein",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Rosa Parks",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Amelia Earhart",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Winston Churchill",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Marie Curie",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Isaac Newton",
+            "name": "historical_person"
+        },
+          {
+            "type": "checkbox",
+            "label": "Martin Luther King Jr",
+            "name": "historical_person"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "historical_person"
+        }]
+      },
+      {
+        "label" : "art",
+        "title": "List your favorites arts",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Renaissance paintings",
+            "name": "art"
+        },
+        {
+            "type": "checkbox",
+            "label": "Contemporary sculpture",
+            "name": "art"
+        },
+        {
+            "type": "checkbox",
+            "label": "Abstract art",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Baroque paintings",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Street ar",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Impressionist sculptures",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cubist art",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Surrealist art",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Abstract expressionism",
+            "name": "art"
+        },
+          {
+            "type": "checkbox",
+            "label": "Minimalist art",
+            "name": "art"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "art"
+        }]
+      },
+      {
+        "label" : "actress",
+        "title": "List your favorites actress",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Meryl Streep",
+            "name": "actress"
+        },
+        {
+            "type": "checkbox",
+            "label": "Scarlett Johansson",
+            "name": "actress"
+        },
+        {
+            "type": "checkbox",
+            "label": "Julia Roberts",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cate Blanchett",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Natalie Portman",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Charlize Theron",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Emma Watson",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Sandra Bullock",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Anne Hathaway",
+            "name": "actress"
+        },
+          {
+            "type": "checkbox",
+            "label": "Keira Knightley",
+            "name": "actress"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "actress"
+        }]
+      },
+      {
+        "label" : "actor",
+        "title": "List your favorites actor",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Leonardo Di Capri",
+            "name": "actor"
+        },
+        {
+            "type": "checkbox",
+            "label": "Tom Hanks",
+            "name": "actor"
+        },
+        {
+            "type": "checkbox",
+            "label": "Robert Downey Jr.",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Morgan Freeman",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Johnny Depp",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Chris Hemsworth",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Denzel Washington",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Matthew McConaughey",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Hugh Jackman",
+            "name": "actor"
+        },
+           {
+            "type": "checkbox",
+            "label": "Leonardo DiCaprio",
+            "name": "actor"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "actor"
+        }]
+      },
+      {
+        "label" : "singer",
+        "title": "List your favorites singer",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Beyoncé",
+            "name": "singer"
+        },
+        {
+            "type": "checkbox",
+            "label": "Taylor Swift",
+            "name": "singer"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bruno Mars",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Adele",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Lady Gaga",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Katy Perry",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Justin Bieber",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Johnn Legend",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Ariana Grande",
+            "name": "singer"
+        },
+           {
+            "type": "checkbox",
+            "label": "Rihanna",
+            "name": "singer"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "singer"
+        }]
+      },
+      {
+        "label" : "athlete",
+        "title": "List your favorites athlete",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Serena Williams",
+            "name": "athlete"
+        },
+        {
+            "type": "checkbox",
+            "label": "Lionel Messi",
+            "name": "athlete"
+        },
+        {
+            "type": "checkbox",
+            "label": "Michael Jordan",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Usain Bolt",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Simone Biles",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Michael Phelps",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cristiano Ronaldo",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Serena Williams",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "LeBron James",
+            "name": "athlete"
+        },
+          {
+            "type": "checkbox",
+            "label": "Stephen Curry",
+            "name": "athlete"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "athlete"
+        }]
+      },
+      {
+        "label" : "brand_clothing",
+        "title": "List your favorites brand clothing",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Uniqlo",
+            "name": "brand_clothing"
+        },
+        {
+            "type": "checkbox",
+            "label": "Stradivarius",
+            "name": "brand_clothing"
+        },
+        {
+            "type": "checkbox",
+            "label": "Gucci",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pull and Bear",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "Zara",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bershka",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "Calvin Klein",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "alph Lauren",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "Levi's",
+            "name": "brand_clothing"
+        },
+          {
+            "type": "checkbox",
+            "label": "H&M",
+            "name": "brand_clothing"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "brand_clothing"
+        }]
+      },
+      {
+        "label" : "clothing_style",
+        "title": "List your favorites clothing style",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Casual",
+            "name": "clothing_style"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bohemian",
+            "name": "clothing_style"
+        },
+        {
+            "type": "checkbox",
+            "label": "Formal",
+            "name": "clothing_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Classic",
+            "name": "clothing_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Streetwear",
+            "name": "clothing_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Vintage",
+            "name": "clothing_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Preppy",
+            "name": "clothing_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Urban",
+            "name": "clothing_style"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "clothing_style"
+        }]
+      },
+      {
+        "label" : "activity_weekend",
+        "title": "List your favorites activity in weekend",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Hiking",
+            "name": "activity_weekend"
+        },
+        {
+            "type": "checkbox",
+            "label": "Watching movies",
+            "name": "activity_weekend"
+        },
+        {
+            "type": "checkbox",
+            "label": "Attending social events",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Beach day",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Movie marathon",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Trying new restaurants",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Attending live performances",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Shopping",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "Reading in the park",
+            "name": "activity_weekend"
+        },
+          {
+            "type": "checkbox",
+            "label": "listening to music",
+            "name": "activity_weekend"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "activity_weekend"
+        }]
+      },
+      {
+        "label" : "car",
+        "title": "List your favorites car",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Tesla Model S",
+            "name": "car"
+        },
+        {
+            "type": "checkbox",
+            "label": "BMW M3",
+            "name": "car"
+        },
+        {
+            "type": "checkbox",
+            "label": "Audi Q5",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tesla Model 3",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Porsche 911",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Mercedes-Benz S-Class",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "BMW 3 Series",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Civic Turbo",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ford Mustang",
+            "name": "car"
+        },
+          {
+            "type": "checkbox",
+            "label": "Audi A4",
+            "name": "car"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "car"
+        }]
+      },
+      {
+        "label" : "place",
+        "title": "List your favorites place",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Beaches",
+            "name": "place"
+        },
+        {
+            "type": "checkbox",
+            "label": "Mountains",
+            "name": "place"
+        },
+        {
+            "type": "checkbox",
+            "label": "Historical landmarks",
+            "name": "place"
+        },
+          {
+            "type": "checkbox",
+            "label": "Park",
+            "name": "place"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tea Garden",
+            "name": "place"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cafe",
+            "name": "place"
+        },
+          {
+            "type": "checkbox",
+            "label": "Museum",
+            "name": "place"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "place"
+        }]
+      },
+      {
+        "label" : "day",
+        "title": "List your favorites day",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Saturday",
+            "name": "day"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sunday",
+            "name": "day"
+        },
+        {
+            "type": "checkbox",
+            "label": "Friday",
+            "name": "day"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thursday",
+            "name": "day"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wednesday",
+            "name": "day"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tuesday",
+            "name": "day"
+        },
+          {
+            "type": "checkbox",
+            "label": "Monday",
+            "name": "day"
+        }]
+      },
+      {
+        "label" : "date",
+        "title": "List your favorites date",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Anniversary",
+            "name": "date"
+        },
+        {
+            "type": "checkbox",
+            "label": "Birthdays",
+            "name": "date"
+        },
+        {
+            "type": "checkbox",
+            "label": "New Year's Eve",
+            "name": "date"
+        },
+          {
+            "type": "checkbox",
+            "label": "Valentine's Da",
+            "name": "date"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thanksgiving",
+            "name": "date"
+        },
+          {
+            "type": "checkbox",
+            "label": "Independence Day",
+            "name": "date"
+        },
+          {
+            "type": "checkbox",
+            "label": "Chinese Year's Eve",
+            "name": "date"
+        }]
+      },
+      {
+        "label" : "animal",
+        "title": "List your favorites animal",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Dogs",
+            "name": "animal"
+        },
+        {
+            "type": "checkbox",
+            "label": "Tigers",
+            "name": "animal"
+        },
+        {
+            "type": "checkbox",
+            "label": "Dolphins",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Elephants",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Lions",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Penguins",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wolves",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Giraffes",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ants",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cow",
+            "name": "animal"
+        },
+          {
+            "type": "checkbox",
+            "label": "Snake",
+            "name": "animal"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "animal"
+        }]
+      },
+      {
+        "label" : "pet",
+        "title": "List your favorites pet",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Cats",
+            "name": "pet"
+        },
+        {
+            "type": "checkbox",
+            "label": "Dogs",
+            "name": "pet"
+        },
+        {
+            "type": "checkbox",
+            "label": "Fish",
+            "name": "pet"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hamsters",
+            "name": "pet"
+        },
+          {
+            "type": "checkbox",
+            "label": "Rabbits",
+            "name": "pet"
+        },
+          {
+            "type": "checkbox",
+            "label": "Birds",
+            "name": "pet"
+        },
+          {
+            "type": "checkbox",
+            "label": "Turtles",
+            "name": "pet"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "pet"
+        }]
+      },
+      {
+        "label" : "family_activity",
+        "title": "List your favorites family activity",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Family game night",
+            "name": "family_activity"
+        },
+        {
+            "type": "checkbox",
+            "label": "Outdoor adventures",
+            "name": "family_activity"
+        },
+        {
+            "type": "checkbox",
+            "label": "Movie nights",
+            "name": "family_activity"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cooking together",
+            "name": "family_activity"
+        },
+          {
+            "type": "checkbox",
+            "label": "Road trips",
+            "name": "family_activity"
+        },
+          {
+            "type": "checkbox",
+            "label": "Board games",
+            "name": "family_activity"
+        },
+          {
+            "type": "checkbox",
+            "label": "Family photo sessions",
+            "name": "family_activity"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "family_activity"
+        }]
+      },
+      {
+        "label" : "puzzle",
+        "title": "List your favorites puzzle",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Crossword puzzles",
+            "name": "puzzle"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sudoku",
+            "name": "puzzle"
+        },
+        {
+            "type": "checkbox",
+            "label": "Jigsaw puzzles",
+            "name": "puzzle"
+        },
+          {
+            "type": "checkbox",
+            "label": "Logic puzzles",
+            "name": "puzzle"
+        },
+          {
+            "type": "checkbox",
+            "label": "Brain teasers",
+            "name": "puzzle"
+        },
+          {
+            "type": "checkbox",
+            "label": "Riddles",
+            "name": "puzzle"
+        },
+          {
+            "type": "checkbox",
+            "label": "Word searches",
+            "name": "puzzle"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "puzzle"
+        }]
+      },
+      {
+        "label" : "park",
+        "title": "List your favorites park",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Safari Park",
+            "name": "park"
+        },
+        {
+            "type": "checkbox",
+            "label": "TMII",
+            "name": "park"
+        },
+        {
+            "type": "checkbox",
+            "label": "Jatim Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Central Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hyde Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ueno Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Yellowstone National Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Banff National Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Yosemite National Park",
+            "name": "park"
+        },
+          {
+            "type": "checkbox",
+            "label": "Serengeti National Park",
+            "name": "park"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "park"
+        }]
+      },
+      {
+        "label" : "gadget",
+        "title": "List your favorites gadget",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "iPhone",
+            "name": "gadget"
+        },
+        {
+            "type": "checkbox",
+            "label": "MacBook",
+            "name": "gadget"
+        },
+        {
+            "type": "checkbox",
+            "label": "Fitbit",
+            "name": "gadget"
+        },
+          {
+            "type": "checkbox",
+            "label": "GoPro",
+            "name": "gadget"
+        },
+          {
+            "type": "checkbox",
+            "label": "Smartwatch",
+            "name": "gadget"
+        },
+          {
+            "type": "checkbox",
+            "label": "Kindle",
+            "name": "gadget"
+        },
+          {
+            "type": "checkbox",
+            "label": "DSLR Camera",
+            "name": "gadget"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "gadget"
+        }]
+      },
+      {
+        "label" : "friends",
+        "title": "List your favorites friends",
+        "answer": [
+        {
+            "type": "text",
+            "label": "",
+            "name": "friends"
+        }]
+      },
+      {
+        "label" : "job",
+        "title": "List your favorites jobs",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Programmer",
+            "name": "job"
+        },
+        {
+            "type": "checkbox",
+            "label": "Pilot",
+            "name": "job"
+        },
+        {
+            "type": "checkbox",
+            "label": "Graphic Designer",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Chef",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Police",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Doctor",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Teacher",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Entrepreneur",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Writer",
+            "name": "job"
+        },
+          {
+            "type": "checkbox",
+            "label": "Marketing manager",
+            "name": "job"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "job"
+        }]
+      },
+      {
+        "label" : "moments",
+        "title": "List your favorites moments",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Graduation day",
+            "name": "moments"
+        },
+        {
+            "type": "checkbox",
+            "label": "Birthday",
+            "name": "moments"
+        },
+        {
+            "type": "checkbox",
+            "label": "Wedding day",
+            "name": "moments"
+        },
+          {
+            "type": "checkbox",
+            "label": "Traveling to a dream destination",
+            "name": "moments"
+        },
+          {
+            "type": "checkbox",
+            "label": "Receiving an award or recognition",
+            "name": "moments"
+        },
+          {
+            "type": "checkbox",
+            "label": "Buying a first home",
+            "name": "moments"
+        },
+          {
+            "type": "checkbox",
+            "label": "Successful career milestones",
+            "name": "moments"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "moments"
+        }]
+      },
+      {
+        "label" : "year",
+        "title": "List your favorites year",
+        "answer": [
+        {
+            "type": "text",
+            "label": "",
+            "name": "year"
+        }]
+      },
+      {
+        "label" : "comic_character",
+        "title": "List your favorites comic character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Captain America",
+            "name": "comic_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Spiderman",
+            "name": "comic_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Batman",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Iron Man",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wonder Woman",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ms.Captain America",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Black Panther",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Deadpool",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hulk",
+            "name": "comic_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thor",
+            "name": "comic_character"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "comic_character"
+        }]
+      },
+      {
+        "label" : "cartoon_character",
+        "title": "List your favorites cartoon character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "SpongeBob",
+            "name": "cartoon_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Upin Ipin",
+            "name": "cartoon_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Mickey Mouse",
+            "name": "cartoon_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Frozen",
+            "name": "cartoon_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pikachu",
+            "name": "cartoon_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Scooby-Doo",
+            "name": "cartoon_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tom and Jerry",
+            "name": "cartoon_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bugs Bunny",
+            "name": "cartoon_character"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "cartoon_character"
+        }]
+      },
+      {
+        "label" : "fictional_character",
+        "title": "List your favorites fictional character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Harry Potter",
+            "name": "fictional_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sherlock Holmes",
+            "name": "fictional_character"
+        },
+        {
+            "type": "checkbox",
+            "label": "Elizabeth Bennet (Pride and Prejudice)",
+            "name": "fictional_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Frodo Baggins (The Lord of the Rings)",
+            "name": "fictional_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Katniss Everdeen (The Hunger Games)",
+            "name": "fictional_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Atticus Finch (To Kill a Mockingbird)",
+            "name": "fictional_character"
+        },
+          {
+            "type": "checkbox",
+            "label": "Jay Gatsby (The Great Gatsby)",
+            "name": "fictional_character"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "fictional_character"
+        }]
+      },
+      {
+        "label" : "accessories",
+        "title": "List your favorites accessories",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Sunglasses",
+            "name": "accessories"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bracelets",
+            "name": "accessories"
+        },
+        {
+            "type": "checkbox",
+            "label": "Watches",
+            "name": "accessories"
+        },
+          {
+            "type": "checkbox",
+            "label": "Necklaces",
+            "name": "accessories"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hats",
+            "name": "accessories"
+        },
+          {
+            "type": "checkbox",
+            "label": "Handbags",
+            "name": "accessories"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cufflinks",
+            "name": "accessories"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "accessories"
+        }]
+      },
+      {
+        "label" : "hair_style",
+        "title": "List your favorites hair style",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Long and wavy",
+            "name": "hair_style"
+        },
+        {
+            "type": "checkbox",
+            "label": "Messy bun",
+            "name": "hair_style"
+        },
+        {
+            "type": "checkbox",
+            "label": "Short and sleek",
+            "name": "hair_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ponytail",
+            "name": "hair_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Braided",
+            "name": "hair_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pixie cut",
+            "name": "hair_style"
+        },
+          {
+            "type": "checkbox",
+            "label": "Beach wave",
+            "name": "hair_style"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "hair_style"
+        }]
+      },
+      {
+        "label" : "music_instrument",
+        "title": "List your favorites music instruments",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Guitar",
+            "name": "music_instrument"
+        },
+        {
+            "type": "checkbox",
+            "label": "Piano",
+            "name": "music_instrument"
+        },
+        {
+            "type": "checkbox",
+            "label": "Violin",
+            "name": "music_instrument"
+        },
+          {
+            "type": "checkbox",
+            "label": "Saxophone",
+            "name": "music_instrument"
+        },
+          {
+            "type": "checkbox",
+            "label": "Drums",
+            "name": "music_instrument"
+        },
+          {
+            "type": "checkbox",
+            "label": "Flute",
+            "name": "music_instrument"
+        },
+          {
+            "type": "checkbox",
+            "label": "Trumpet",
+            "name": "music_instrument"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "music_instrument"
+        }]
+      },
+      {
+        "label" : "plant",
+        "title": "List your favorites plants",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Orchids",
+            "name": "plant"
+        },
+        {
+            "type": "checkbox",
+            "label": "Succulents",
+            "name": "plant"
+        },
+        {
+            "type": "checkbox",
+            "label": "Monstera deliciosa (Swiss cheese plant)",
+            "name": "plant"
+        },
+          {
+            "type": "checkbox",
+            "label": "Lavender",
+            "name": "plant"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bonsai trees",
+            "name": "plant"
+        },
+          {
+            "type": "checkbox",
+            "label": "Roses",
+            "name": "plant"
+        },
+          {
+            "type": "checkbox",
+            "label": "Sunflowers",
+            "name": "plant"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "plant"
+        }]
+      }
+    ]
+},
+{
+    "dislikes" : [
+    {
+        "label" : "food_dislike",
+        "title": "List your least favorite foods",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Pizza",
+            "name": "food_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Soto",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Ramen",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Burger",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Tacos",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Sushi",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Pasta",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Cheese Cake",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Steak",
+            "name": "food_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chicken Noodle",
+            "name": "food_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "food_dislike"
+        }]
+    },
+    {
+        "label" : "beverages_dislike",
+        "title": "List your least favorite beverages",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Coffee",
+            "name": "beverages_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Matcha Latte",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Vanilla Milkshake",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Water",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Ice Tea",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Orange Juice",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Wine",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Lemonade",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Herbal Tea",
+            "name": "beverages_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Smoothie",
+            "name": "beverages_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "beverages_dislike"
+        }]
+    },
+      {
+        "label" : "genre_movie_dislike",
+        "title": "List your least favorite genre movies",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Action",
+            "name": "genre_movie_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Comedy",
+            "name": "genre_movie_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Romance",
+            "name": "genre_movie_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Thriller",
+            "name": "genre_movie_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Horror",
+            "name": "genre_movie_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fantasy",
+            "name": "genre_movie_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Documentary",
+            "name": "genre_movie_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_movie_dislike"
+        }]
+    },
+      {
+        "label" : "movie_dislike",
+        "title": "List your least favorite movies",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "movie_dislike"
+        }]
+    },
+      {
+        "label" : "genre_music_dislike",
+        "title": "List your least favorite music genre",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Pop",
+            "name": "genre_music_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Hip-hop",
+            "name": "genre_music_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Rock",
+            "name": "genre_music_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Electronic",
+            "name": "genre_music_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Jazz",
+            "name": "genre_music_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Classical",
+            "name": "genre_music_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"R&B",
+            "name": "genre_music_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Indie",
+            "name": "genre_music_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_music_dislike"
+        }]
+    },
+      {
+        "label" : "music_dislike",
+        "title": "List your least favorite musics",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "music_dislike"
+        }]
+    },
+      {
+        "label" : "genre_book_dislike",
+        "title": "List your least favorite book genre",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Mystery",
+            "name": "genre_book_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Historical Fiction",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fantasy",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Science Fiction",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Biography",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Comedy",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Non-fiction",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Young Adult",
+            "name": "genre_book_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Poetry",
+            "name": "genre_book_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "genre_book_dislike"
+        }]
+    },
+      {
+        "label" : "book_dislike",
+        "title": "List your least favorite books",
+        "answer": [{
+            "type": "text",
+            "label":"",
+            "name": "book_dislike"
+        }]
+    },
+      {
+        "label" : "city_dislike",
+        "title": "List your least favorite cities",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Paris",
+            "name": "city_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Tokyo",
+            "name": "city_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Jakarta",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Seoul",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"New York",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Lauterbrunnen",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Sydney",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Roma",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Barcelona",
+            "name": "city_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Dubai",
+            "name": "city_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "city_dislike"
+        }]
+    },
+      {
+        "label" : "country_dislike",
+        "title": "List your least favorite countries",
+        "answer": [{
+            "type": "checkbox",
+            "label":"South Korea",
+            "name": "country_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Indonesia",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"USA",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Singapore",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Thailand",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Australia",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Brazil",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Saudi Arabia",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Italia",
+            "name": "country_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"France",
+            "name": "country_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "country_dislike"
+        }]
+    },
+      {
+        "label" : "hobbies",
+        "title": "List your least favorite hobbies",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Travelling",
+            "name": "hobbies_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Photography",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Watching Movie",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Painting",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Jogging",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Yoga",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Gardening",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Reading",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Cycling",
+            "name": "hobbies_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Gym",
+            "name": "hobbies_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "hobbies_dislike"
+        }]
+    },
+      {
+        "label" : "colour_dislike",
+        "title": "List your least favorite colours",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Red",
+            "name": "colour_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Black",
+            "name": "colour_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Blue",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"White",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Pink",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Green",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Yellow",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Orange",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Navy",
+            "name": "colour_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Lavender",
+            "name": "colour_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "colour_dislike"
+        }]
+    },
+      {
+        "label" : "sport_dislike",
+        "title": "List your least favorite sports",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Basketball",
+            "name": "sport_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Soccer",
+            "name": "sport_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Tennis",
+            "name": "sport_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Badminton",
+            "name": "sport_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Surfing",
+            "name": "sport_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Archery",
+            "name": "sport_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Table Tennis",
+            "name": "sport_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "sport_dislike"
+        }]
+    },
+      {
+        "label" : "band_dislike",
+        "title": "List your least favorite bands",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "band_dislike"
+        }]
+    },
+      {
+        "label" : "games_dislike",
+        "title": "List your least favorites games",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Minecraft",
+            "name": "games_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Mobile Legend",
+            "name": "games_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Fortnite",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Apex Legends",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Witcher 3: Wild Hunt",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"League of Legends",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Call of Duty: Warzone",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Overwatch",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Super Mario Bros",
+            "name": "games_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Animal Crossing: New Horizons",
+            "name": "games_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "games_dislike"
+        }]
+    },
+      {
+        "label" : "tv_dislike",
+        "title": "List your least favorites tv show",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Game of Thrones",
+            "name": "tv_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Stranger Things",
+            "name": "tv_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"The Office",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Breaking Bad",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Simpsons",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Friends",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Black Mirror",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Sopranos",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"The Mandalorian",
+            "name": "tv_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label":"Westworld",
+            "name": "tv_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "tv_dislike"
+        }]
+    },
+      {
+        "label" : "season_dislike",
+        "title": "List your least favorites seasons",
+        "answer": [{
+            "type": "checkbox",
+            "label":"Winter",
+            "name": "season_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Spring",
+            "name": "season_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Summer",
+            "name": "season_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Fall",
+            "name": "season_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Dry",
+            "name": "season_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Rainy",
+            "name": "season_dislike"
+        }
+        ]
+    },
+      {
+        "label" : "fastfood_restaurant_dislike",
+        "title": "List your least favorites fast food restaurants",
+        "answer": [{
+            "type": "checkbox",
+            "label":"McDonald's",
+            "name": "fastfood_restaurant_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label":"Subway",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Pizza Hut",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"KFC",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Burger King",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Wendy's",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chipotle",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Taco Bell",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Chick-fil-A",
+            "name": "fastfood_restaurant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label":"Popeye",
+            "name": "fastfood_restaurant_dislike"
+        },
+        {
+            "type": "text",
+            "label":"",
+            "name": "fastfood_restaurant_dislike"
+        }]
+    },
+      {
+        "label" : "application_dislike",
+        "title": "List your least favorites phone applications",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "application_dislike"
+        }]
+    },
+      {
+        "label" : "person_dislike",
+        "title": "List your least favorites persons",
+        "answer": [
+        {
+            "type": "text",
+            "label":"",
+            "name": "person_dislike"
+        }]
+    },
+      {
+        "label" : "historical_person_dislike",
+        "title": "List your least favorites historical persons",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Mahatma Gandhi",
+            "name": "historical_person_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Leonardo da Vinci",
+            "name": "historical_person_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Nelson Mandela",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Albert Einstein",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Rosa Parks",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Amelia Earhart",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Winston Churchill",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Marie Curie",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Isaac Newton",
+            "name": "historical_person_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Martin Luther King Jr",
+            "name": "historical_person_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "historical_person_dislike"
+        }]
+      },
+      {
+        "label" : "art_dislike",
+        "title": "List your least favorites arts",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Renaissance paintings",
+            "name": "art_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Contemporary sculpture",
+            "name": "art_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Abstract art",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Baroque paintings",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Street ar",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Impressionist sculptures",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cubist art",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Surrealist art",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Abstract expressionism",
+            "name": "art_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Minimalist art",
+            "name": "art_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "art_dislike"
+        }]
+      },
+      {
+        "label" : "actress_dislike",
+        "title": "List your least favorites actress",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Meryl Streep",
+            "name": "actress_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Scarlett Johansson",
+            "name": "actress_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Julia Roberts",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cate Blanchett",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Natalie Portman",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Charlize Theron",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Emma Watson",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Sandra Bullock",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Anne Hathaway",
+            "name": "actress_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Keira Knightley",
+            "name": "actress_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "actress_dislike"
+        }]
+      },
+      {
+        "label" : "actor_dislike",
+        "title": "List your least favorites actor",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Leonardo Di Capri",
+            "name": "actor_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Tom Hanks",
+            "name": "actor_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Robert Downey Jr.",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Morgan Freeman",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Johnny Depp",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Chris Hemsworth",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Denzel Washington",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Matthew McConaughey",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Hugh Jackman",
+            "name": "actor_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Leonardo DiCaprio",
+            "name": "actor_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "actor_dislike"
+        }]
+      },
+      {
+        "label" : "singer_dislike",
+        "title": "List your least favorites singer",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Beyoncé",
+            "name": "singer_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Taylor Swift",
+            "name": "singer_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bruno Mars",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Adele",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Lady Gaga",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Katy Perry",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Justin Bieber",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Johnn Legend",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Ariana Grande",
+            "name": "singer_dislike"
+        },
+           {
+            "type": "checkbox",
+            "label": "Rihanna",
+            "name": "singer_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "singer_dislike"
+        }]
+      },
+      {
+        "label" : "athlete_dislike",
+        "title": "List your least favorites athlete",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Serena Williams",
+            "name": "athlete_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Lionel Messi",
+            "name": "athlete_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Michael Jordan",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Usain Bolt",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Simone Biles",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Michael Phelps",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cristiano Ronaldo",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Serena Williams",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "LeBron James",
+            "name": "athlete_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Stephen Curry",
+            "name": "athlete_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "athlete_dislike"
+        }]
+      },
+      {
+        "label" : "brand_clothing_dislike",
+        "title": "List your least favorites brand clothing",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Uniqlo",
+            "name": "brand_clothing_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Stradivarius",
+            "name": "brand_clothing_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Gucci",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pull and Bear",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Zara",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bershka",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Calvin Klein",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "alph Lauren",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Levi's",
+            "name": "brand_clothing_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "H&M",
+            "name": "brand_clothing_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "brand_clothing_dislike"
+        }]
+      },
+      {
+        "label" : "clothing_style_dislike",
+        "title": "List your least favorites clothing style",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Casual",
+            "name": "clothing_style_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bohemian",
+            "name": "clothing_style_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Formal",
+            "name": "clothing_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Classic",
+            "name": "clothing_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Streetwear",
+            "name": "clothing_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Vintage",
+            "name": "clothing_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Preppy",
+            "name": "clothing_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Urban",
+            "name": "clothing_style_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "clothing_style_dislike"
+        }]
+      },
+      {
+        "label" : "activity_weekend_dislike",
+        "title": "List your least favorites activity in weekend",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Hiking",
+            "name": "activity_weekend_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Watching movies",
+            "name": "activity_weekend_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Attending social events",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Beach day",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Movie marathon",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Trying new restaurants",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Attending live performances",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Shopping",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Reading in the park",
+            "name": "activity_weekend_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "listening to music",
+            "name": "activity_weekend_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "activity_weekend_dislike"
+        }]
+      },
+      {
+        "label" : "car_dislike",
+        "title": "List your least favorites car",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Tesla Model S",
+            "name": "car_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "BMW M3",
+            "name": "car_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Audi Q5",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tesla Model 3",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Porsche 911",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Mercedes-Benz S-Class",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "BMW 3 Series",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Civic Turbo",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ford Mustang",
+            "name": "car_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Audi A4",
+            "name": "car_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "car_dislike"
+        }]
+      },
+      {
+        "label" : "place_dislike",
+        "title": "List your least favorites place",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Beaches",
+            "name": "place_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Mountains",
+            "name": "place_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Historical landmarks",
+            "name": "place_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Park",
+            "name": "place_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tea Garden",
+            "name": "place_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cafe",
+            "name": "place_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Museum",
+            "name": "place_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "place_dislike"
+        }]
+      },
+      {
+        "label" : "day_dislike",
+        "title": "List your least favorites day",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Saturday",
+            "name": "day_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sunday",
+            "name": "day_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Friday",
+            "name": "day_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thursday",
+            "name": "day_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wednesday",
+            "name": "day_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tuesday",
+            "name": "day_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Monday",
+            "name": "day_dislike"
+        }]
+      },
+      {
+        "label" : "date_dislike",
+        "title": "List your least favorites date",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Anniversary",
+            "name": "date_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Birthdays",
+            "name": "date_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "New Year's Eve",
+            "name": "date_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Valentine's Da",
+            "name": "date_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thanksgiving",
+            "name": "date_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Independence Day",
+            "name": "date_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Chinese Year's Eve",
+            "name": "date_dislike"
+        }]
+      },
+      {
+        "label" : "animal_dislike",
+        "title": "List your least favorites animal",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Dogs",
+            "name": "animal_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Tigers",
+            "name": "animal_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Dolphins",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Elephants",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Lions",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Penguins",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wolves",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Giraffes",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ants",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cow",
+            "name": "animal_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Snake",
+            "name": "animal_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "animal_dislike"
+        }]
+      },
+      {
+        "label" : "pet_dislike",
+        "title": "List your least favorites pet",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Cats",
+            "name": "pet_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Dogs",
+            "name": "pet_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Fish",
+            "name": "pet_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hamsters",
+            "name": "pet_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Rabbits",
+            "name": "pet_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Birds",
+            "name": "pet_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Turtles",
+            "name": "pet_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "pet_dislike"
+        }]
+      },
+      {
+        "label" : "family_activity_dislike",
+        "title": "List your least favorites family activity",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Family game night",
+            "name": "family_activity_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Outdoor adventures",
+            "name": "family_activity_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Movie nights",
+            "name": "family_activity_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cooking together",
+            "name": "family_activity_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Road trips",
+            "name": "family_activity_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Board games",
+            "name": "family_activity_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Family photo sessions",
+            "name": "family_activity_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "family_activity_dislike"
+        }]
+      },
+      {
+        "label" : "puzzle_dislike",
+        "title": "List your least favorites puzzle",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Crossword puzzles",
+            "name": "puzzle_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sudoku",
+            "name": "puzzle_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Jigsaw puzzles",
+            "name": "puzzle_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Logic puzzles",
+            "name": "puzzle_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Brain teasers",
+            "name": "puzzle_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Riddles",
+            "name": "puzzle_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Word searches",
+            "name": "puzzle_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "puzzle_dislike"
+        }]
+      },
+      {
+        "label" : "park_dislike",
+        "title": "List your least favorites park",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Safari Park",
+            "name": "park_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "TMII",
+            "name": "park_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Jatim Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Central Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hyde Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ueno Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Yellowstone National Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Banff National Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Yosemite National Park",
+            "name": "park_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Serengeti National Park",
+            "name": "park_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "park_dislike"
+        }]
+      },
+      {
+        "label" : "gadget_dislike",
+        "title": "List your least favorites gadget",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "iPhone",
+            "name": "gadget_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "MacBook",
+            "name": "gadget_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Fitbit",
+            "name": "gadget_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "GoPro",
+            "name": "gadget_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Smartwatch",
+            "name": "gadget_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Kindle",
+            "name": "gadget_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "DSLR Camera",
+            "name": "gadget_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "gadget_dislike"
+        }]
+      },
+      {
+        "label" : "friends_dislike",
+        "title": "List your least favorites friends",
+        "answer": [
+        {
+            "type": "text",
+            "label": "",
+            "name": "friends_dislike"
+        }]
+      },
+      {
+        "label" : "job_dislike",
+        "title": "List your least favorites jobs",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Programmer",
+            "name": "job_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Pilot",
+            "name": "job_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Graphic Designer",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Chef",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Police",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Doctor",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Teacher",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Entrepreneur",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Writer",
+            "name": "job_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Marketing manager",
+            "name": "job_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "job_dislike"
+        }]
+      },
+      {
+        "label" : "moments_dislike",
+        "title": "List your least favorites moments",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Graduation day",
+            "name": "moments_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Birthday",
+            "name": "moments_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Wedding day",
+            "name": "moments_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Traveling to a dream destination",
+            "name": "moments_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Receiving an award or recognition",
+            "name": "moments_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Buying a first home",
+            "name": "moments_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Successful career milestones",
+            "name": "moments_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "moments_dislike"
+        }]
+      },
+      {
+        "label" : "year_dislike",
+        "title": "List your least favorites year",
+        "answer": [
+        {
+            "type": "text",
+            "label": "",
+            "name": "year_dislike"
+        }]
+      },
+      {
+        "label" : "comic_character_dislike",
+        "title": "List your least favorites comic character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Captain America",
+            "name": "comic_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Spiderman",
+            "name": "comic_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Batman",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Iron Man",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Wonder Woman",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ms.Captain America",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Black Panther",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Deadpool",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hulk",
+            "name": "comic_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Thor",
+            "name": "comic_character_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "comic_character_dislike"
+        }]
+      },
+      {
+        "label" : "cartoon_character_dislike",
+        "title": "List your least favorites cartoon character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "SpongeBob",
+            "name": "cartoon_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Upin Ipin",
+            "name": "cartoon_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Mickey Mouse",
+            "name": "cartoon_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Frozen",
+            "name": "cartoon_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pikachu",
+            "name": "cartoon_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Scooby-Doo",
+            "name": "cartoon_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Tom and Jerry",
+            "name": "cartoon_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bugs Bunny",
+            "name": "cartoon_character_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "cartoon_character_dislike"
+        }]
+      },
+      {
+        "label" : "fictional_character_dislike",
+        "title": "List your least favorites fictional character",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Harry Potter",
+            "name": "fictional_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Sherlock Holmes",
+            "name": "fictional_character_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Elizabeth Bennet (Pride and Prejudice)",
+            "name": "fictional_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Frodo Baggins (The Lord of the Rings)",
+            "name": "fictional_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Katniss Everdeen (The Hunger Games)",
+            "name": "fictional_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Atticus Finch (To Kill a Mockingbird)",
+            "name": "fictional_character_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Jay Gatsby (The Great Gatsby)",
+            "name": "fictional_character_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "fictional_character_dislike"
+        }]
+      },
+      {
+        "label" : "accessories_dislike",
+        "title": "List your least favorites accessories",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Sunglasses",
+            "name": "accessories_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Bracelets",
+            "name": "accessories_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Watches",
+            "name": "accessories_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Necklaces",
+            "name": "accessories_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Hats",
+            "name": "accessories_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Handbags",
+            "name": "accessories_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Cufflinks",
+            "name": "accessories_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "accessories_dislike"
+        }]
+      },
+      {
+        "label" : "hair_style_dislike",
+        "title": "List your least favorites hair style",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Long and wavy",
+            "name": "hair_style_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Messy bun",
+            "name": "hair_style_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Short and sleek",
+            "name": "hair_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Ponytail",
+            "name": "hair_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Braided",
+            "name": "hair_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Pixie cut",
+            "name": "hair_style_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Beach wave",
+            "name": "hair_style_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "hair_style_dislike"
+        }]
+      },
+      {
+        "label" : "music_instrument_dislike",
+        "title": "List your least favorites music instruments",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Guitar",
+            "name": "music_instrument_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Piano",
+            "name": "music_instrument_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Violin",
+            "name": "music_instrument_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Saxophone",
+            "name": "music_instrument_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Drums",
+            "name": "music_instrument_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Flute",
+            "name": "music_instrument_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Trumpet",
+            "name": "music_instrument_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "music_instrument_dislike"
+        }]
+      },
+      {
+        "label" : "plant_dislike",
+        "title": "List your least favorites plants",
+        "answer": [
+        {
+            "type": "checkbox",
+            "label": "Orchids",
+            "name": "plant_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Succulents",
+            "name": "plant_dislike"
+        },
+        {
+            "type": "checkbox",
+            "label": "Monstera deliciosa (Swiss cheese plant)",
+            "name": "plant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Lavender",
+            "name": "plant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Bonsai trees_dislike",
+            "name": "plant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Roses",
+            "name": "plant_dislike"
+        },
+          {
+            "type": "checkbox",
+            "label": "Sunflowers",
+            "name": "plant_dislike"
+        },
+        {
+            "type": "text",
+            "label": "",
+            "name": "plant_dislike"
+        }]
+      }
+    ]
 }
+]

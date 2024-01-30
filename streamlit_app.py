@@ -1,11 +1,16 @@
 import datetime
 import json
 import requests
-
 import streamlit as st
-
 from openai import OpenAI
 
+def create_checkboxes(category, items):
+    for index, item in enumerate(items):
+        unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
+        if item["type"] == "checkbox":
+            st.checkbox(item["label"], key=unique_key)
+        elif item["type"] == "text":
+            st.text_input("", key=unique_key, placeholder="Other (please specify)")
 
 def main():
     st.set_page_config(page_title="Person Data Creator")
@@ -20,53 +25,44 @@ def main():
     if "client" not in st.session_state:
         st.session_state.client = None
 
+    # Load JSON data
     with open("question.json", 'r') as file:
         question_file = json.load(file)
         questions = [question["question"] for question in question_file["questions"]]
 
     with open("likeness.json", "r") as file:
-        likeness_file = json.load(file)
-        likeness_questions = likeness_file["likes"]
-        dislikes_questions = likeness_file["dislikes"]
-        routines_questions = likeness_file["routines"]
+        data = json.load(file)
 
-    setting_tab, data_tab, like_tab, person_tab, example_tab, result_tab = st.tabs(
-        ["Setting", "Data", "Likeness", "Person", "Example", "Result"]
+    # Streamlit tabs
+    setting_tab, data_tab, likes_tab, dislikes_tab, routines_tab, person_tab, example_tab, result_tab = st.tabs(
+        ["Setting", "Data", "Likes", "Dislikes", "Routines", "Person", "Example", "Result"]
     )
 
     with setting_tab:
         api_key = st.text_input("OpenAI API Key")
-
         if st.button("Set", type="primary"):
             st.session_state.client = OpenAI(api_key=api_key)
-
+    # Data tab
     with data_tab:
         st.header("Personal")
         col1, _ = st.columns([4, 6])
         with col1:
             st.session_state.data["name"] = st.text_input("Name")
-
         col2, col3, col4 = st.columns([3, 4, 4])
         with col2:
             st.session_state.data["age"] = st.text_input("Age")
         with col3:
             st.session_state.data["birthplace"] = st.text_input("Birthplace")
         with col4:
-            st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY",
-                                                                   min_value=datetime.date.today() - datetime.timedelta(
-                                                                       100 * 365)))
-
+            st.session_state.data["birthdate"] = str(st.date_input("Birthdate", format="DD/MM/YYYY", min_value=datetime.date.today() - datetime.timedelta(100 * 365)))
         st.session_state.data["address"] = st.text_area("Address")
-
         col5, col6 = st.columns([2, 8])
         with col5:
             st.session_state.data["job"] = st.text_input("Job")
         with col6:
             st.session_state.data["job_desc"] = st.text_area("Job Description")
-
         st.divider()
         st.header("Family")
-
         col7, col8, col9, col10 = st.columns(4)
         with col7:
             st.session_state.data["father"] = st.text_input("Father")
@@ -81,183 +77,64 @@ def main():
         st.header("Personality")
         st.session_state.data["personalities"] = st.text_area("Personality")
         st.session_state.data["behaviour"] = st.text_area("Talking Behaviours")
-
         st.divider()
         st.header("Behaviour")
-
         st.session_state.data["like_respond"] = st.text_area("Usual respond with something that like")
         st.session_state.data["dlike_respond"] = st.text_area("Usual respond with something that doesn't like")
         st.session_state.data["dknow_respond"] = st.text_area("Usual respond with something that doesn't know")
 
-    with like_tab:
-        with st.expander("Like"):
-            st.session_state.data["like"] = {}
-            for k, v in likeness_questions.items():
-                st.write(f"{v}")
-                st.session_state.data["like"][k] = st.text_area(f"{k}_like", label_visibility="collapsed")
+    # Likeness tab
+    with routines_tab:
+        for category in data[0]["routines"]:
+            st.subheader(category["title"])
+            create_checkboxes(category["label"], category["answer"])
 
-        with st.expander("Dislike"):
-            st.session_state.data["dislike"] = {}
-            for k, v in dislikes_questions.items():
-                st.write(f"{v}")
-                st.session_state.data["dislike"][k] = st.text_area(f"{k}_dislikes", label_visibility="collapsed")
+    with likes_tab:
+        for category in data[1]["likes"]:
+            st.subheader(category["title"])
+            create_checkboxes(category["label"], category["answer"])
 
-        with st.expander("Routine"):
-            st.session_state.data["routine"] = {}
-            for k, v in routines_questions.items():
-                st.write(f"{v}")
-                st.session_state.data["routine"][k] = st.text_area(k, label_visibility="collapsed")
+    with dislikes_tab:
+        for category in data[2]["dislikes"]:
+            st.subheader(category["title"])
+            create_checkboxes(category["label"], category["answer"])
 
+
+    # Person tab
     with person_tab:
         choices = ["Disagree", "Slightly disagree", "Neutral", "Slightly agree", "Agree"]
-        personality = {}
-
+        st.session_state.data["personality"] = {}
+        # Contoh pertanyaan, sesuaikan dengan kebutuhan Anda
+        questions = ["I enjoy social gatherings", "I like to try new things"]
         for idx, question in enumerate(questions, start=1):
-            personality[f"{idx}"] = choices.index(st.select_slider(
-                question,
-                ["Disagree", "Slightly disagree", "Slightly agree", "Agree"]
-            )) + 1
-
-        if st.button("Submit", type="primary"):
-            with st.spinner('Loading...'):
-                headers = {
-                    "content-type": "application/json",
-                    "X-RapidAPI-Key": "73393e472bmsh711d065d4b7aa16p17ca0bjsncbce18697459",
-                    "X-RapidAPI-Host": "big-five-personality-test.p.rapidapi.com"
-                }
-
-                payload = {
-                    "answers": personality
-                }
-
-                response = requests.post(
-                    url="https://big-five-personality-test.p.rapidapi.com/submit",
-                    json=payload,
-                    headers=headers
-                )
-
-                st.session_state.data["big_five"] = st.session_state.client.chat.completions.create(
-                    model="gpt-3.5-turbo-1106",
-                    messages=[
-                        {"role": "system",
-                         "content": "You are a personality summarizing chatbot. You will summarize the personality based on the 'your_type' value"},
-                        {"role": "user",
-                         "content": f"{response.json()} summarize it and retell it like you talking to somebody else using casual word and no number within 50 words"}
-                    ],
-                    stream=False,
-                    top_p=1,
-                    frequency_penalty=0.45,
-                    presence_penalty=0.15
-                ).choices[0].message.content
+            st.session_state.data["personality"][question] = st.select_slider(question, options=choices)
 
     with example_tab:
-        e_casual = {}
-        for i in range(3):
-            e_casual[i] = st.text_area(
-                f"Example when talking casually {i + 1}",
-                value="U: Hi\nA: What's up\nU: How are you doing?\nA: Pretty good"
-            )
-
-        e_likes = {}
-        for i in range(3):
-            e_likes[i] = st.text_area(f"Example when talking something likes {i + 1}")
-
-        e_dlikes = {}
-        for i in range(3):
-            e_dlikes[i] = st.text_area(f"Example when talking something doesn't likes {i + 1}")
-
-        e_dknow = {}
-        for i in range(3):
-            e_dknow[i] = st.text_area(f"Example when talking something don't know {i + 1}")
-
-        if st.button("Done", type="primary"):
-
-            system_casual = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']}"
-            system_likes = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You likes {st.session_state.data['likes']}, and when talking about something you likes usually you {st.session_state.data['like_respond']}"
-            system_dlikes = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You dislikes {st.session_state.data['dislikes']}, and when talking about something you dislikes usually you {st.session_state.data['dlike_respond']}"
-            system_dknow = f"You are {st.session_state.data['name']}, a {st.session_state.data['age']}-years-old {st.session_state.data['job']}, {st.session_state.data['big_five']} You usually {st.session_state.data['behaviour']}, When talking about something you dont know usually you {st.session_state.data['dknow_respond']}"
-
-            for chat in e_casual.values():
-                messages = {"messages": [{
-                    "role": "systems", "content": system_casual
-                }]}
-
-                text = chat.splitlines()
-
-                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
-                messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
-
-                st.session_state.dataset.append(messages)
-
-            for chat in e_likes.values():
-                messages = {"messages": [{
-                    "role": "systems", "content": system_likes
-                }]}
-
-                text = chat.splitlines()
-
-                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
-                messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
-
-                st.session_state.dataset.append(messages)
-
-            for chat in e_dlikes.values():
-                messages = {"messages": [{
-                    "role": "systems", "content": system_dlikes
-                }]}
-
-                text = chat.splitlines()
-
-                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
-                messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
-
-                st.session_state.dataset.append(messages)
-
-            for chat in e_dknow.values():
-                messages = {"messages": [{
-                    "role": "systems", "content": system_dknow
-                }]}
-
-                text = chat.splitlines()
-
-                messages['messages'].append({"role": "user", "content": text[0].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[1].replace("A:", "")})
-                messages['messages'].append({"role": "user", "content": text[2].replace("U:", "")})
-                messages['messages'].append({"role": "assistant", "content": text[3].replace("A:", "")})
-
-                st.session_state.dataset.append(messages)
+        st.session_state.data["examples"] = {}
+        example_prompts = ["Casual conversation", "Talking about likes", "Talking about dislikes"]
+        for idx, prompt in enumerate(example_prompts, start=1):
+            st.session_state.data["examples"][prompt] = st.text_area(f"Example of {prompt.lower()}:")
 
     with result_tab:
-        with st.expander("Person"):
-            st.write(st.session_state.data)
-        with st.expander("Dataset"):
-            st.write(st.session_state.dataset)
+        with st.expander("Your Data"):
+            st.json(st.session_state.data)
 
-        json_data_person = json.dumps(st.session_state.data)
-        json_dataset_person = json.dumps(st.session_state.dataset)
+        with st.expander("Personality Profile"):
+            for question, answer in st.session_state.data.get("personality", {}).items():
+                st.write(f"{question}: {answer}")
 
-        col11, col12, _ = st.columns([3, 3, 10])
-        with col11:
-            st.download_button(
-                label="Download Person",
-                file_name="data_person.json",
-                mime="application/json",
-                data=json_data_person,
-            )
-        with col12:
-            st.download_button(
-                label="Download Dataset",
-                file_name="dataset_person.json",
-                mime="application/json",
-                data=json_dataset_person,
-            )
+        with st.expander("Example Conversations"):
+            for example, text in st.session_state.data.get("examples", {}).items():
+                st.write(f"{example}: {text}")
 
+        if st.button("Download Data"):
+            json_data = json.dumps(st.session_state.data)
+            st.download_button(label="Download JSON", data=json_data, file_name="user_data.json",
+                               mime="application/json")
+
+
+if __name__ == '__main__':
+    main()
     # st.set_page_config(page_title="Chat With A Person")
     # st.header("Let's Chat !", divider="gray")
     #
@@ -639,7 +516,3 @@ def main():
     #
     #     # Add the bot respond to the history
     #     st.session_state.messages.append({"role": "assistant", "content": full_response})
-
-
-if __name__ == '__main__':
-    main()
