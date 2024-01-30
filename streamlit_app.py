@@ -4,13 +4,25 @@ import requests
 import streamlit as st
 from openai import OpenAI
 
+# Fungsi untuk membuat elemen-elemen input
 def create_checkboxes(category, items):
+    saved_data = {}  # Untuk menyimpan data
+    
     for index, item in enumerate(items):
-        unique_key = f"{category}_{item['name']}_{item['label']}_{index}"
+        unique_key = f"{category}{item['name']}{item['label']}_{index}"
         if item["type"] == "checkbox":
-            st.checkbox(item["label"], key=unique_key)
+            saved_data[unique_key] = st.checkbox(item["label"], key=unique_key)
         elif item["type"] == "text":
-            st.text_input("", key=unique_key, placeholder="Other (please specify)")
+            saved_data[unique_key] = st.text_input("", key=unique_key, placeholder="Other (please specify)")
+    
+    if st.button("Simpan"):  # Tombol untuk menyimpan data
+        # Lakukan sesuatu dengan data yang disimpan, misalnya kirim ke database
+        st.write("Data yang disimpan:", saved_data)
+
+# Contoh penggunaan dengan data dari file JSON
+for category in data:
+    st.header(category["title"])
+    create_checkboxes(category["label"], category["answer"])
 
 def main():
     st.set_page_config(page_title="Person Data Creator")
