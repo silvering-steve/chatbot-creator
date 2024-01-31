@@ -20,7 +20,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "daily_activities"
         }]
     },
@@ -44,7 +44,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "morning_routines"
         }]
     },
@@ -68,7 +68,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "afternoon_routines"
         }]
     },
@@ -92,7 +92,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "night_routines"
         }]
     },
@@ -116,7 +116,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "weekend_routines"
         }]
     },
@@ -140,7 +140,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "weekday_routines"
         }]
     }
@@ -307,7 +307,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_movie"
         }]
     },
@@ -316,7 +316,7 @@
         "title": "List your favorite movies",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "movie"
         }]
     },
@@ -365,7 +365,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_music"
         }]
     },
@@ -374,7 +374,7 @@
         "title": "List your favorite musics",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "music"
         }]
     },
@@ -428,7 +428,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_book"
         }]
     },
@@ -437,7 +437,7 @@
         "title": "List your favorite books",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "book"
         }]
     },
@@ -496,7 +496,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "city"
         }]
     },
@@ -555,7 +555,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "country"
         }]
     },
@@ -614,7 +614,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "hobbies"
         }]
     },
@@ -673,7 +673,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "colour"
         }]
     },
@@ -717,7 +717,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "sport"
         }]
     },
@@ -727,7 +727,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "band"
         }]
     },
@@ -786,7 +786,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "games"
         }]
     },
@@ -845,7 +845,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "tv"
         }]
     },
@@ -939,7 +939,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "fastfood_restaurant"
         }]
     },
@@ -949,7 +949,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "application"
         }]
     },
@@ -959,7 +959,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "person"
         }]
     },
@@ -1019,7 +1019,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "historical_person"
         }]
       },
@@ -1079,7 +1079,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "art"
         }]
       },
@@ -1139,7 +1139,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "actress"
         }]
       },
@@ -1199,7 +1199,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "actor"
         }]
       },
@@ -1259,7 +1259,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "singer"
         }]
       },
@@ -1319,7 +1319,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "athlete"
         }]
       },
@@ -1379,7 +1379,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "brand_clothing"
         }]
       },
@@ -1429,7 +1429,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "clothing_style"
         }]
       },
@@ -1489,7 +1489,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "activity_weekend"
         }]
       },
@@ -1549,7 +1549,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "car"
         }]
       },
@@ -1594,7 +1594,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "place"
         }]
       },
@@ -1739,7 +1739,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "animal"
         }]
       },
@@ -1784,7 +1784,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "pet"
         }]
       },
@@ -1829,7 +1829,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "family_activity"
         }]
       },
@@ -1874,7 +1874,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "puzzle"
         }]
       },
@@ -1934,7 +1934,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "park"
         }]
       },
@@ -1979,7 +1979,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "gadget"
         }]
       },
@@ -1989,7 +1989,7 @@
         "answer": [
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "friends"
         }]
       },
@@ -2049,7 +2049,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "job"
         }]
       },
@@ -2094,7 +2094,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "moments"
         }]
       },
@@ -2104,7 +2104,7 @@
         "answer": [
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "year"
         }]
       },
@@ -2164,7 +2164,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "comic_character"
         }]
       },
@@ -2214,7 +2214,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "cartoon_character"
         }]
       },
@@ -2259,7 +2259,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "fictional_character"
         }]
       },
@@ -2304,7 +2304,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "accessories"
         }]
       },
@@ -2349,7 +2349,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "hair_style"
         }]
       },
@@ -2394,7 +2394,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "music_instrument"
         }]
       },
@@ -2439,7 +2439,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "plant"
         }]
       }
@@ -2605,7 +2605,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_movie_dislike"
         }]
     },
@@ -2614,7 +2614,7 @@
         "title": "List your least favorite movies",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "movie_dislike"
         }]
     },
@@ -2663,7 +2663,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_music_dislike"
         }]
     },
@@ -2672,7 +2672,7 @@
         "title": "List your least favorite musics",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "music_dislike"
         }]
     },
@@ -2726,7 +2726,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "genre_book_dislike"
         }]
     },
@@ -2735,7 +2735,7 @@
         "title": "List your least favorite books",
         "answer": [{
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "book_dislike"
         }]
     },
@@ -2794,7 +2794,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "city_dislike"
         }]
     },
@@ -2853,7 +2853,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "country_dislike"
         }]
     },
@@ -2912,7 +2912,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "hobbies_dislike"
         }]
     },
@@ -2971,7 +2971,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "colour_dislike"
         }]
     },
@@ -3015,7 +3015,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "sport_dislike"
         }]
     },
@@ -3025,7 +3025,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "band_dislike"
         }]
     },
@@ -3084,7 +3084,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "games_dislike"
         }]
     },
@@ -3143,7 +3143,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "tv_dislike"
         }]
     },
@@ -3237,7 +3237,7 @@
         },
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "fastfood_restaurant_dislike"
         }]
     },
@@ -3247,7 +3247,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "application_dislike"
         }]
     },
@@ -3257,7 +3257,7 @@
         "answer": [
         {
             "type": "text",
-            "label":"",
+            "label":"Other",
             "name": "person_dislike"
         }]
     },
@@ -3317,7 +3317,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "historical_person_dislike"
         }]
       },
@@ -3377,7 +3377,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "art_dislike"
         }]
       },
@@ -3437,7 +3437,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "actress_dislike"
         }]
       },
@@ -3497,7 +3497,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "actor_dislike"
         }]
       },
@@ -3557,7 +3557,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "singer_dislike"
         }]
       },
@@ -3617,7 +3617,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "athlete_dislike"
         }]
       },
@@ -3677,7 +3677,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "brand_clothing_dislike"
         }]
       },
@@ -3727,7 +3727,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "clothing_style_dislike"
         }]
       },
@@ -3787,7 +3787,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "activity_weekend_dislike"
         }]
       },
@@ -3847,7 +3847,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "car_dislike"
         }]
       },
@@ -3892,7 +3892,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "place_dislike"
         }]
       },
@@ -3957,7 +3957,7 @@
         },
           {
             "type": "checkbox",
-            "label": "Valentine's Da",
+            "label": "Valentine's Day",
             "name": "date_dislike"
         },
           {
@@ -4037,7 +4037,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "animal_dislike"
         }]
       },
@@ -4082,7 +4082,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "pet_dislike"
         }]
       },
@@ -4127,7 +4127,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "family_activity_dislike"
         }]
       },
@@ -4172,7 +4172,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "puzzle_dislike"
         }]
       },
@@ -4232,7 +4232,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "park_dislike"
         }]
       },
@@ -4277,7 +4277,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "gadget_dislike"
         }]
       },
@@ -4287,7 +4287,7 @@
         "answer": [
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "friends_dislike"
         }]
       },
@@ -4347,7 +4347,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "job_dislike"
         }]
       },
@@ -4392,7 +4392,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "moments_dislike"
         }]
       },
@@ -4402,7 +4402,7 @@
         "answer": [
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "year_dislike"
         }]
       },
@@ -4462,7 +4462,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "comic_character_dislike"
         }]
       },
@@ -4512,7 +4512,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "cartoon_character_dislike"
         }]
       },
@@ -4557,7 +4557,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "fictional_character_dislike"
         }]
       },
@@ -4602,7 +4602,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "accessories_dislike"
         }]
       },
@@ -4647,7 +4647,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "hair_style_dislike"
         }]
       },
@@ -4692,7 +4692,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "music_instrument_dislike"
         }]
       },
@@ -4737,7 +4737,7 @@
         },
         {
             "type": "text",
-            "label": "",
+            "label": "Other",
             "name": "plant_dislike"
         }]
       }
