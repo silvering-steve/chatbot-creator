@@ -101,11 +101,16 @@ def main():
             options = [item["label"] for item in category['answer']]
             routines_data = st.multiselect(category["title"], options, label_visibility="collapsed")
 
-            st.session_state.data["routines"][category['label']] += routines_data
+            # Remove "Other" from list and replace with user input if present
+            if "Other" in routines_data:
+                routines_data.remove("Other")  # Remove the placeholder
+                other_routine = st.text_input(f"Other routines {category['label']}",
+                                              key=f"other_routines_{category['label']}")
+                if other_routine:  # Only add if the user has provided something
+                    routines_data.append(other_routine)
 
-            if "Other" in st.session_state.data["routines"][category['label']]:
-                st.session_state.data["routines"][category['label']].append(
-                    st.text_input(f"Other routines {category['label']}"))
+            # Convert list to string
+            st.session_state.data["routines"][category['label']] = ', '.join(routines_data)
 
     with likes_tab:
         st.session_state.data["likes"] = {}
@@ -117,11 +122,15 @@ def main():
             options = [item["label"] for item in category['answer']]
             likes_data = st.multiselect(category["title"], options, label_visibility="collapsed")
 
-            st.session_state.data["likes"][category['label']] += likes_data
+            # Remove "Other" from list and replace with user input if present
+            if "Other" in likes_data:
+                likes_data.remove("Other")  # Remove the placeholder
+                other_like = st.text_input(f"Other likes {category['label']}", key=f"other_likes_{category['label']}")
+                if other_like:  # Only add if the user has provided something
+                    likes_data.append(other_like)
 
-            if "Other" in st.session_state.data["likes"][category['label']]:
-                st.session_state.data["likes"][category['label']].append(
-                    st.text_input(f"Other likes {category['label']}"))
+            # Convert list to string
+            st.session_state.data["likes"][category['label']] = ', '.join(likes_data)
 
     with dislikes_tab:
         st.session_state.data["dislikes"] = {}
@@ -131,13 +140,17 @@ def main():
             st.session_state.data["dislikes"][category['label']] = []
 
             options = [item["label"] for item in category['answer']]
-            dislikes_tab = st.multiselect(category["title"], options, label_visibility="collapsed")
+            dislike_data = st.multiselect(category["title"], options, label_visibility="collapsed")
 
-            st.session_state.data["dislikes"][category['label']] += dislikes_tab
+            # Remove "Other" from list and replace with user input if present
+            if "Other" in dislike_data:
+                dislike_data.remove("Other")  # Remove the placeholder
+                other_like = st.text_input(f"Other likes {category['label']}", key=f"other_likes_{category['label']}")
+                if other_like:  # Only add if the user has provided something
+                    dislike_data.append(other_like)
 
-            if "Other" in st.session_state.data["dislikes"][category['label']]:
-                st.session_state.data["dislikes"][category['label']].append(
-                    st.text_input(f"Other dislikes {category['label']}"))
+            # Convert list to string
+            st.session_state.data["dislikes"][category['label']] = ', '.join(dislike_data)
 
     # Person tab
     with person_tab:
